@@ -1,0 +1,729 @@
+{
+  "meta": {
+    "name": "Qotbnama",
+    "tagline": "Know your ideas better.",
+    "description": "An educational tool to discover your approximate political orientation and learn about political systems and ideologies in a neutral way."
+  },
+  "nav": {
+    "home": "Home",
+    "intro": "About",
+    "test": "Quiz",
+    "education": "Learn",
+    "map": "World map",
+    "share": "Share",
+    "results": "Results"
+  },
+  "common": {
+    "start": "Start the quiz",
+    "startShort": "Start",
+    "next": "Next",
+    "previous": "Previous",
+    "finish": "See results",
+    "back": "Back",
+    "backHome": "Back to home",
+    "learnMore": "Learn more",
+    "retake": "Retake quiz",
+    "close": "Close",
+    "loading": "Loading…",
+    "skip": "Skip",
+    "of": "of",
+    "minutes": "minutes",
+    "readMore": "Read more",
+    "showLess": "Show less"
+  },
+  "theme": {
+    "toggle": "Toggle light/dark mode",
+    "light": "Light",
+    "dark": "Dark"
+  },
+  "language": {
+    "label": "Language",
+    "select": "Select language"
+  },
+  "landing": {
+    "badge": "Educational · Neutral · No sign-up",
+    "title": "Discover your political orientation",
+    "subtitle": "Take a short, research-based questionnaire to see where your political thinking sits on the map — and learn about the many systems and ideologies along the way.",
+    "ctaPrimary": "Start the quiz",
+    "ctaSecondary": "Learn how it works",
+    "featuresTitle": "Why Qotbnama?",
+    "features": {
+      "neutral": {
+        "title": "Completely neutral",
+        "desc": "Questions are built on established methodologies and never judge who you are."
+      },
+      "private": {
+        "title": "Fully private",
+        "desc": "No data is collected. Everything is processed locally on your own device."
+      },
+      "educational": {
+        "title": "Engaging learning",
+        "desc": "After the quiz, explore political concepts through interactive cards and visuals."
+      },
+      "visual": {
+        "title": "Visual analysis",
+        "desc": "Your result is shown clearly with a political compass, a radar chart and summary cards."
+      }
+    },
+    "stepsTitle": "Three simple steps",
+    "steps": {
+      "one": { "title": "Answer", "desc": "Respond to 35 statements on a seven-point scale." },
+      "two": { "title": "See your result", "desc": "Find your position on the political map and charts." },
+      "three": { "title": "Learn", "desc": "Explore the ideas closest to you — neutrally and clearly." }
+    },
+    "disclaimer": "This is an educational estimate, not a scientific diagnosis."
+  },
+  "intro": {
+    "title": "Before you begin",
+    "lead": "Qotbnama helps you understand your approximate political orientation neutrally and learn about a range of ideas.",
+    "purpose": {
+      "title": "Purpose",
+      "desc": "The goal is educational: to help you understand political concepts and see your own position in political debate more clearly."
+    },
+    "duration": {
+      "title": "Time needed",
+      "desc": "About 5 to 7 minutes — 35 statements, each answered on a seven-point scale."
+    },
+    "privacy": {
+      "title": "Privacy",
+      "desc": "No name, email or personal data required. Answers stay on your device and are never sent anywhere."
+    },
+    "nature": {
+      "title": "Educational nature",
+      "desc": "This quiz is a scientific-educational exercise designed to encourage reflection, not to label anyone."
+    },
+    "disclaimerTitle": "Important reminder",
+    "disclaimer": "This is an educational estimate and not a scientific or psychological diagnosis. Your result is only an approximate snapshot of your tendencies at the moment of answering.",
+    "start": "Start the questionnaire"
+  },
+  "likert": {
+    "0": "Strongly disagree",
+    "1": "Disagree",
+    "2": "Slightly disagree",
+    "3": "Neutral",
+    "4": "Slightly agree",
+    "5": "Agree",
+    "6": "Strongly agree"
+  },
+  "questionnaire": {
+    "progress": "Question {{current}} of {{total}}",
+    "percent": "{{percent}}% complete",
+    "selectHint": "Choose how much you agree.",
+    "answered": "Answered",
+    "unanswered": "Unanswered",
+    "mustAnswer": "Please answer this question to continue.",
+    "reviewTitle": "Review your answers",
+    "incompleteWarning": "{{count}} question(s) left unanswered. You can continue, but answering all of them improves accuracy.",
+    "metaSource": "Methodology",
+    "metaDimension": "Dimension",
+    "showMeta": "Show methodology",
+    "hideMeta": "Hide methodology"
+  },
+  "questions": {
+    "q01": "The government should act to reduce the income gap between the rich and the poor.",
+    "q02": "Free competition and private enterprise are the best way to create growth and prosperity.",
+    "q03": "It is fair to tax the wealthy more in order to fund public services.",
+    "q04": "People's success or failure depends mainly on their own effort.",
+    "q05": "Maintaining order and security in society matters more than some individual freedoms.",
+    "q06": "People should be free to live differently from others, even if others disapprove.",
+    "q07": "Respect for authority and obedience to the law are core values of a healthy society.",
+    "q08": "Protecting citizens' privacy is more important than expanding state surveillance for security.",
+    "q09": "Living under a system whose leaders are chosen through free elections is very important.",
+    "q10": "Having a strong leader who can decide freely without worrying about elections benefits the country.",
+    "q11": "A free press and an independent judiciary are essential for a good society.",
+    "q12": "The rights of minority groups should be protected even against the will of the majority.",
+    "q13": "The government is responsible for ensuring a decent standard of living for all citizens.",
+    "q14": "The economy works better when the government intervenes and regulates less.",
+    "q15": "Key industries such as water, electricity and railways are better kept in public ownership.",
+    "q16": "Regulating businesses to protect people and the environment is necessary.",
+    "q17": "The country's laws should be based on religious principles and values.",
+    "q18": "Religion and government are better kept separate from each other.",
+    "q19": "Preserving long-standing traditions matters more than embracing new social change.",
+    "q20": "Policy should be based above all on scientific evidence and reason.",
+    "q21": "Society's wealth should be distributed more fairly among all people.",
+    "q22": "Lower taxes and a smaller government are good for the economy.",
+    "q23": "Workers' share of company profits matters more than the profits of owners.",
+    "q24": "Harsh punishments are the best way to reduce crime in society.",
+    "q25": "Adults should be free to make any choices in their private lives, as long as no one else is harmed.",
+    "q26": "When security is threatened, temporarily limiting some freedoms is acceptable.",
+    "q27": "As long as things go well, it doesn't much matter how or by whom decisions are made.",
+    "q28": "All citizens should be able to express their political views freely, even against those in power.",
+    "q29": "In a crisis, the military or experts should decide instead of elected politicians.",
+    "q30": "People should be more responsible than the government for meeting their own needs (such as pensions and healthcare).",
+    "q31": "The government should control the prices of essential goods to protect people.",
+    "q32": "Transferring state-owned companies to the private sector usually benefits society.",
+    "q33": "Teaching religious values should be part of the public school curriculum.",
+    "q34": "Laws on family and morality should be set by public consensus, not by religious rulings.",
+    "q35": "Preserving society's traditional values and identity should be a priority for the state."
+  },
+  "dimensions": {
+    "economic": {
+      "name": "Economic",
+      "negative": "Left",
+      "positive": "Right",
+      "description": "Your view of markets, income equality and ownership in the economy."
+    },
+    "social": {
+      "name": "Social",
+      "negative": "Libertarian",
+      "positive": "Authoritarian",
+      "description": "How you balance individual freedom against social order and authority."
+    },
+    "democratic": {
+      "name": "Democratic",
+      "negative": "Non-democratic",
+      "positive": "Democratic",
+      "description": "Your commitment to elections, press freedom and minority rights."
+    },
+    "state": {
+      "name": "Role of the state",
+      "negative": "Free market",
+      "positive": "State intervention",
+      "description": "Your preference between a free market and state involvement in welfare."
+    },
+    "secular": {
+      "name": "Religion & state",
+      "negative": "Traditional / religious",
+      "positive": "Secular",
+      "description": "Your view of religion's place in law-making and public life."
+    }
+  },
+  "results": {
+    "title": "Your result",
+    "subtitle": "An approximate picture of your political orientation at the moment of answering.",
+    "completedOn": "Completed on",
+    "answered": "{{answered}} of {{total}} questions answered",
+    "compassTitle": "Political compass",
+    "compassHint": "Horizontal: economic (left ↔ right) — Vertical: social (libertarian ↔ authoritarian)",
+    "yourPosition": "Your position",
+    "radarTitle": "Overview of dimensions",
+    "barsTitle": "Dimension by dimension",
+    "summaryTitle": "Result summary",
+    "analysisTitle": "Detailed analysis",
+    "whyTitle": "Why this result?",
+    "whyDesc": "Your result comes from the sum of your answers. Each answer is weighted by the importance and direction of its question within the relevant dimension.",
+    "contributorsTitle": "Most influential answers",
+    "contributorsDesc": "These answers contributed the most to your position:",
+    "strengthsTitle": "Clear leanings",
+    "strengthsDesc": "Dimensions where you showed a clearer tendency.",
+    "limitsTitle": "Limitations",
+    "limitsDesc": "This is an educational estimate and cannot capture the full complexity of your views. Answers may change with time and context.",
+    "recommendedTitle": "Recommended for you",
+    "recommendedDesc": "These concepts are close to your current position; exploring them rounds out your understanding.",
+    "leanStrong": "Strong leaning",
+    "leanModerate": "Moderate leaning",
+    "leanCenter": "Near the center",
+    "towards": "toward {{pole}}",
+    "centerLabel": "Balanced",
+    "noResultTitle": "No result yet",
+    "noResultDesc": "Complete the questionnaire first to see your result.",
+    "quadrants": {
+      "centrist": "Centrist",
+      "libertarian-left": "Libertarian Left",
+      "libertarian-right": "Libertarian Right",
+      "authoritarian-left": "Authoritarian Left",
+      "authoritarian-right": "Authoritarian Right"
+    },
+    "quadrantDesc": {
+      "centrist": "Your views balance between the various poles, sitting close to the center.",
+      "libertarian-left": "You value economic equality alongside personal freedoms.",
+      "libertarian-right": "You value free markets together with personal freedoms.",
+      "authoritarian-left": "You lean toward economic equality with a stronger role for order and authority.",
+      "authoritarian-right": "You lean toward free markets with an emphasis on social order and authority."
+    }
+  },
+  "education": {
+    "title": "Political education",
+    "subtitle": "Learn the key concepts of politics in plain, neutral language.",
+    "searchPlaceholder": "Search a concept…",
+    "all": "All",
+    "noResults": "Nothing found.",
+    "recommendedBadge": "Recommended for you",
+    "categories": {
+      "systems": "Systems of government",
+      "ideologies": "Ideologies",
+      "economics": "Economic systems",
+      "structures": "State structures"
+    },
+    "fields": {
+      "definition": "Definition",
+      "history": "History",
+      "advantages": "Advantages",
+      "criticisms": "Criticisms",
+      "examples": "Real-world examples",
+      "misconceptions": "Common misconceptions"
+    },
+    "quizTitle": "Quick quiz",
+    "quizCorrect": "Correct!",
+    "quizWrong": "Try again.",
+    "topics": {
+      "democracy": {
+        "title": "Democracy",
+        "summary": "Government whose power derives from the votes of the people.",
+        "definition": "Democracy is a system in which citizens, directly or through elected representatives, take part in public decisions, and political power draws its legitimacy from the people's vote.",
+        "history": "The word goes back to ancient Athens (5th century BCE). Its modern form, representative democracy, spread from the 18th and 19th centuries after the American and French revolutions.",
+        "advantages": [
+          "Rulers are accountable to the people",
+          "Power can change hands peacefully",
+          "Citizens' rights and freedoms are protected"
+        ],
+        "criticisms": [
+          "Risk of a 'tyranny of the majority' over minorities",
+          "Slow decision-making in a crisis",
+          "Vulnerability to populism"
+        ],
+        "examples": ["Switzerland", "India", "Canada"],
+        "misconceptions": [
+          "Democracy means only voting; in fact minority rights and a constitution are part of it too.",
+          "Democracy always guarantees the best decision; in practice it only guarantees the process of participation."
+        ]
+      },
+      "republic": {
+        "title": "Republic",
+        "summary": "A system whose head of state is not hereditary and is usually elected.",
+        "definition": "A republic is a form of government in which power rests with the people or their representatives, and the head of state is chosen rather than being a hereditary monarch.",
+        "history": "Early examples appear in ancient Rome and the Italian city-states. The modern concept took shape with the American (1776) and French (1792) revolutions.",
+        "advantages": [
+          "No hereditary hierarchy at the top of power",
+          "Emphasis on citizenship and the rule of law",
+          "Leadership can rotate periodically"
+        ],
+        "criticisms": [
+          "Being a republic alone does not guarantee freedom",
+          "It can turn into a one-party or authoritarian system"
+        ],
+        "examples": ["France", "Germany", "Brazil"],
+        "misconceptions": [
+          "Every republic is democratic; in fact some republics hold no free elections.",
+          "Republic and democracy are the same; the two concepts are actually distinct."
+        ]
+      },
+      "constitutional-monarchy": {
+        "title": "Constitutional monarchy",
+        "summary": "A monarch whose power is limited by a constitution.",
+        "definition": "In a constitutional monarchy the king or queen symbolizes the nation, but real power lies with parliament and an elected government, and a constitution limits the monarch's authority.",
+        "history": "It began with England's Glorious Revolution (1688) and the Bill of Rights (1689) and became a model for many countries.",
+        "advantages": [
+          "Symbolic continuity and stability",
+          "Ceremonial role separated from executive power",
+          "A link between tradition and democracy"
+        ],
+        "criticisms": [
+          "A hereditary post is seen as conflicting with equality",
+          "The cost of maintaining the monarchy"
+        ],
+        "examples": ["United Kingdom", "Japan", "Sweden"],
+        "misconceptions": [
+          "The monarch holds real executive power; in most of these systems the role is ceremonial."
+        ]
+      },
+      "absolute-monarchy": {
+        "title": "Absolute monarchy",
+        "summary": "A monarch in whom power is concentrated and unchecked.",
+        "definition": "In an absolute monarchy, all or most political power rests with the monarch, and elected institutions or a constitution place no serious limit on them.",
+        "history": "It was common in 17th- and 18th-century Europe; Louis XIV of France, with his phrase 'I am the state,' is a symbol of it.",
+        "advantages": [
+          "Fast, unified decision-making",
+          "Long-term continuity of leadership"
+        ],
+        "criticisms": [
+          "Lack of accountability and checks on power",
+          "Risk of tyranny and rights violations"
+        ],
+        "examples": ["Saudi Arabia", "Oman", "Brunei"],
+        "misconceptions": [
+          "Absolute monarchy belongs to the past; yet examples of it still exist."
+        ]
+      },
+      "parliamentary": {
+        "title": "Parliamentary system",
+        "summary": "The executive emerges from, and is accountable to, parliament.",
+        "definition": "In a parliamentary system the head of government (prime minister) is chosen from among members of parliament, and the government stays in office only as long as it holds parliament's confidence.",
+        "history": "This model evolved in Britain and spread to many European and Commonwealth countries.",
+        "advantages": [
+          "Coordination between the legislature and executive",
+          "An ineffective government can be removed by a confidence vote",
+          "More flexibility during political crises"
+        ],
+        "criticisms": [
+          "Possible instability of coalition governments",
+          "Concentration of power in the majority party"
+        ],
+        "examples": ["Germany", "India", "United Kingdom"],
+        "misconceptions": [
+          "The prime minister is elected directly like a president; usually they are not."
+        ]
+      },
+      "presidential": {
+        "title": "Presidential system",
+        "summary": "The president is elected separately and heads the executive.",
+        "definition": "In a presidential system the president is elected separately, serves as both head of state and head of government, and the executive operates independently of the legislature.",
+        "history": "Its model is the United States Constitution (1787), which emphasizes the separation of powers.",
+        "advantages": [
+          "Clear separation of powers",
+          "Stability of the presidential term",
+          "Direct election of the executive leader"
+        ],
+        "criticisms": [
+          "Risk of deadlock between president and parliament",
+          "Concentration of power in one person"
+        ],
+        "examples": ["United States", "Brazil", "Indonesia"],
+        "misconceptions": [
+          "Every country with a president is presidential; some are semi-presidential or parliamentary."
+        ]
+      },
+      "authoritarianism": {
+        "title": "Authoritarianism",
+        "summary": "Concentrated power and restricted political freedoms.",
+        "definition": "Authoritarianism is a system in which power is concentrated in one person or a small group, and political participation and civil liberties are heavily restricted.",
+        "history": "Examples were numerous in the 20th century, spanning a wide range from military to one-party regimes.",
+        "advantages": [
+          "Fast decision-making",
+          "Apparent short-term stability"
+        ],
+        "criticisms": [
+          "Lack of accountability and freedom",
+          "Suppression of opponents",
+          "Corruption due to a lack of oversight"
+        ],
+        "examples": ["Numerous historical cases in Asia, Africa and Latin America"],
+        "misconceptions": [
+          "Authoritarianism is the same as totalitarianism; but totalitarianism is more extreme and all-encompassing."
+        ]
+      },
+      "totalitarianism": {
+        "title": "Totalitarianism",
+        "summary": "Total state control over every aspect of life.",
+        "definition": "Totalitarianism is an extreme form of authoritarianism in which the state seeks total control over every dimension of public and private life, from the economy to thought and culture.",
+        "history": "The concept was used especially to describe certain 20th-century regimes in the 1930s and 1940s.",
+        "advantages": [
+          "(Analytically) large-scale mobilization of resources for state goals"
+        ],
+        "criticisms": [
+          "Widespread human-rights violations",
+          "Complete elimination of freedom and pluralism",
+          "Forced ideology and repression"
+        ],
+        "examples": ["Historical cases studied in political science"],
+        "misconceptions": [
+          "Every strict government is totalitarian; totalitarianism has specific, all-encompassing features."
+        ]
+      },
+      "liberalism": {
+        "title": "Liberalism",
+        "summary": "Emphasis on individual freedom, rights and the rule of law.",
+        "definition": "Liberalism is a body of thought that emphasizes individual freedom, equality before the law, human rights and limits on the power of the state.",
+        "history": "It grew out of the 18th-century Enlightenment and thinkers such as John Locke, and shaped the American and French revolutions.",
+        "advantages": [
+          "Protection of individual freedoms",
+          "Rule of law and equal rights",
+          "Encourages innovation and pluralism"
+        ],
+        "criticisms": [
+          "May overlook economic inequality",
+          "Emphasis on the individual can come at the cost of social solidarity"
+        ],
+        "examples": ["Liberal democracies in Europe and North America"],
+        "misconceptions": [
+          "Liberalism means 'left' in everyday American usage; but in its classical sense it also emphasizes free markets."
+        ]
+      },
+      "conservatism": {
+        "title": "Conservatism",
+        "summary": "Valuing tradition, stability and gradual change.",
+        "definition": "Conservatism is a tendency that emphasizes preserving established institutions and values, social stability, and measured, gradual change.",
+        "history": "It took shape as a reaction to the French Revolution; Edmund Burke is one of its first theorists.",
+        "advantages": [
+          "Preserves stability and social cohesion",
+          "Caution toward rapid change",
+          "Respect for historical experience"
+        ],
+        "criticisms": [
+          "Can hinder necessary reforms",
+          "May preserve existing inequalities"
+        ],
+        "examples": ["Conservative parties in the UK and Germany"],
+        "misconceptions": [
+          "Conservatism means opposing all change; in fact it emphasizes gradual change."
+        ]
+      },
+      "socialism": {
+        "title": "Socialism",
+        "summary": "Emphasis on collective ownership and economic equality.",
+        "definition": "Socialism is a set of ideas emphasizing social or collective ownership of the means of production and the reduction of economic inequality.",
+        "history": "It arose in the wake of the 19th-century Industrial Revolution and in reaction to its inequalities.",
+        "advantages": [
+          "Emphasis on reducing inequality",
+          "Provision of universal services",
+          "Attention to workers' rights"
+        ],
+        "criticisms": [
+          "Risk of reducing economic incentives",
+          "Possible concentration of power in the state"
+        ],
+        "examples": ["Socialist parties and welfare policies in Europe"],
+        "misconceptions": [
+          "Socialism is the same as communism; in fact it spans a wide range from democratic to revolutionary tendencies."
+        ]
+      },
+      "social-democracy": {
+        "title": "Social democracy",
+        "summary": "Combining a free market with a welfare state and democracy.",
+        "definition": "Social democracy seeks to pair a market economy with extensive welfare policies, social protection and parliamentary democracy.",
+        "history": "It evolved in Europe, especially the Scandinavian countries, in the late 19th and the 20th century.",
+        "advantages": [
+          "Balance between economic growth and social justice",
+          "Strong public services",
+          "Commitment to democracy"
+        ],
+        "criticisms": [
+          "High tax burden",
+          "Challenge of funding welfare in the long run"
+        ],
+        "examples": ["Sweden", "Denmark", "Norway"],
+        "misconceptions": [
+          "Social democracy means full socialism; but it retains the free market."
+        ]
+      },
+      "communism": {
+        "title": "Communism",
+        "summary": "The ideal of a classless society with communal ownership.",
+        "definition": "Communism is an idea aimed at a classless society without private ownership of the means of production, where resources are managed communally.",
+        "history": "It took shape from the ideas of Karl Marx and Friedrich Engels in the 19th century and led to revolutions in the 20th.",
+        "advantages": [
+          "(In theory) full economic equality",
+          "Emphasis on abolishing social classes"
+        ],
+        "criticisms": [
+          "In practice it has often led to concentrated power and repression",
+          "Reduced incentives and economic efficiency"
+        ],
+        "examples": ["Historical cases in the 20th century"],
+        "misconceptions": [
+          "Communism and socialism are the same; communism is a more idealized and radical form."
+        ]
+      },
+      "fascism": {
+        "title": "Fascism",
+        "summary": "Extreme nationalism and severe authoritarianism.",
+        "definition": "Fascism is an authoritarian ideology that emphasizes extreme nationalism, a powerful leader, suppression of opponents and the supremacy of the nation or race.",
+        "history": "It emerged in interwar Europe (the 1920s and 1930s).",
+        "advantages": [
+          "(From a purely historical-analytical view) large-scale national and propaganda mobilization"
+        ],
+        "criticisms": [
+          "Suppression of freedom and human rights",
+          "Violence and warmongering",
+          "Elimination of pluralism and opponents"
+        ],
+        "examples": ["Historical regimes studied in political science"],
+        "misconceptions": [
+          "Fascism is merely the 'economic far right'; but its core component is authoritarian nationalism."
+        ]
+      },
+      "anarchism": {
+        "title": "Anarchism",
+        "summary": "Opposition to coercive authority and state hierarchy.",
+        "definition": "Anarchism is a body of thought that opposes the coercive authority of the state and seeks a society based on voluntary cooperation and self-governance.",
+        "history": "It took shape in the 19th century with thinkers such as Proudhon and Bakunin.",
+        "advantages": [
+          "Emphasis on freedom and autonomy",
+          "Opposition to concentrated power"
+        ],
+        "criticisms": [
+          "Doubts about feasibility in large societies",
+          "Risk of disorder in the absence of institutions"
+        ],
+        "examples": ["Limited historical movements and experiments"],
+        "misconceptions": [
+          "Anarchism means chaos; in fact it refers to order without coercive authority."
+        ]
+      },
+      "secularism": {
+        "title": "Secularism",
+        "summary": "Separation of the institution of religion from the state.",
+        "definition": "Secularism is the principle of separating religion from government, holding that public institutions should be run independently of religious authority while freedom of belief is guaranteed.",
+        "history": "It is rooted in the Enlightenment and is expressed in the French constitution (laïcité) and in the United States.",
+        "advantages": [
+          "State neutrality among religions and beliefs",
+          "Protection of religious freedom and conscience",
+          "Reduced religious tensions in government"
+        ],
+        "criticisms": [
+          "Some see it as conflicting with the public role of religion",
+          "Defining the line between religion and state is not always easy"
+        ],
+        "examples": ["France", "India", "Turkey (historically)"],
+        "misconceptions": [
+          "Secularism means hostility to religion; in fact it refers to state neutrality, not the denial of belief."
+        ]
+      },
+      "capitalism": {
+        "title": "Capitalism",
+        "summary": "An economy based on private ownership and free markets.",
+        "definition": "Capitalism is an economic system in which the means of production are privately owned, and prices, production and distribution are set through free markets and competition.",
+        "history": "It spread from the 18th- and 19th-century Industrial Revolution; Adam Smith is one of its key theorists.",
+        "advantages": [
+          "Encourages innovation and entrepreneurship",
+          "Efficiency in allocating resources",
+          "Freedom of economic choice"
+        ],
+        "criticisms": [
+          "Possible increase in inequality",
+          "Periodic market instability",
+          "Little attention to social and environmental costs"
+        ],
+        "examples": ["Market-based economies around the world"],
+        "misconceptions": [
+          "Capitalism means no regulation at all; in fact most economies mix markets and regulation."
+        ]
+      },
+      "welfare-state": {
+        "title": "Welfare state",
+        "summary": "The state's role in providing welfare and public services.",
+        "definition": "A welfare state is a model in which the government takes major responsibility for citizens' education, health, pensions and social protection.",
+        "history": "It began in late 19th-century Germany and expanded across Europe after the Second World War.",
+        "advantages": [
+          "Reduces poverty and inequality",
+          "Universal access to basic services",
+          "Greater social security"
+        ],
+        "criticisms": [
+          "High cost and tax burden",
+          "Concerns about reduced incentives"
+        ],
+        "examples": ["The Scandinavian countries", "Germany", "France"],
+        "misconceptions": [
+          "A welfare state means socialism; but it is also compatible with a market economy."
+        ]
+      },
+      "federalism": {
+        "title": "Federalism",
+        "summary": "Dividing power between a central government and local units.",
+        "definition": "Federalism is a system in which power is divided between a central government and regional units (states), each level holding its own authority.",
+        "history": "Its modern model took shape with the United States Constitution (1787).",
+        "advantages": [
+          "Distributes power and reduces concentration",
+          "Flexibility for regional diversity",
+          "Greater local participation"
+        ],
+        "criticisms": [
+          "Possible inconsistency between regions",
+          "Legal and administrative complexity"
+        ],
+        "examples": ["United States", "Germany", "Switzerland"],
+        "misconceptions": [
+          "Federalism means separatism; in fact it is a way to maintain unity while preserving diversity."
+        ]
+      },
+      "unitary-state": {
+        "title": "Unitary state",
+        "summary": "Concentration of power in the central government.",
+        "definition": "In a unitary state, the main power rests with the central government, and local units derive their authority from the center, which can alter them.",
+        "history": "It is the most common form of state organization in the world and is rooted in centralized European nation-states.",
+        "advantages": [
+          "Unity in legislation and policy",
+          "Coordination and administrative simplicity"
+        ],
+        "criticisms": [
+          "Possible neglect of local differences",
+          "Excessive concentration of power"
+        ],
+        "examples": ["France", "Japan", "Iran"],
+        "misconceptions": [
+          "A unitary state means no local government; in fact local governments exist, but their power derives from the center."
+        ]
+      }
+    }
+  },
+  "map": {
+    "eyebrow": "Interactive map",
+    "title": "Systems of government around the world",
+    "subtitle": "Hover over or tap a country to see its system of government and key facts.",
+    "hoverHint": "Hover over countries to reveal their details.",
+    "tapHint": "Tap a country to reveal its details.",
+    "selectPrompt": "Select a country",
+    "selectPromptDesc": "Pick a country on the map to see its system of government, capital, population and region.",
+    "capital": "Capital",
+    "population": "Population",
+    "region": "Region",
+    "system": "System of government",
+    "legendTitle": "Systems legend",
+    "notAvailable": "Data not available",
+    "reset": "Reset view",
+    "zoomIn": "Zoom in",
+    "zoomOut": "Zoom out",
+    "people": "people",
+    "disclaimer": "Figures are approximate and for educational purposes. System classifications are high-level and neutral."
+  },
+  "systems": {
+    "presidential": { "label": "Presidential republic", "desc": "The president is both head of state and head of government, elected separately from parliament." },
+    "semi-presidential": { "label": "Semi-presidential republic", "desc": "Executive power is shared between an elected president and a prime minister accountable to parliament." },
+    "parliamentary-republic": { "label": "Parliamentary republic", "desc": "The executive emerges from and is accountable to parliament; the head of state is largely ceremonial." },
+    "constitutional-monarchy": { "label": "Constitutional monarchy", "desc": "A monarch symbolizes the nation while real power rests with parliament and an elected government." },
+    "absolute-monarchy": { "label": "Absolute monarchy", "desc": "Most power is concentrated in the monarch, with no serious constitutional limits." },
+    "one-party": { "label": "One-party state", "desc": "A single party holds political power." },
+    "theocratic": { "label": "Theocratic republic", "desc": "Religious principles play a central role in the structure of government and law." },
+    "directorial": { "label": "Directorial republic", "desc": "Executive power is held by a collective council rather than a single person." },
+    "provisional": { "label": "Provisional / transitional", "desc": "The government is in a transitional or interim phase." },
+    "territory": { "label": "Dependent territory", "desc": "A dependent or autonomous part of another country." },
+    "disputed": { "label": "Disputed status", "desc": "Its political status or recognition is contested." },
+    "none": { "label": "No permanent government", "desc": "A territory with no permanent population or national government." }
+  },
+  "regions": {
+    "asia": "Asia",
+    "europe": "Europe",
+    "africa": "Africa",
+    "north-america": "North America",
+    "south-america": "South America",
+    "oceania": "Oceania",
+    "antarctica": "Antarctica"
+  },
+  "shareSite": {
+    "eyebrow": "Spread the word",
+    "title": "Share Qotbnama",
+    "subtitle": "Introduce this educational tool to others — on any social network or messenger.",
+    "ogTitle": "Qotbnama | Know your ideas better",
+    "description": "Qotbnama is a free, neutral educational tool: take a short quiz to discover your approximate political orientation and learn about the world's political systems and ideologies — no sign-up, fully private.",
+    "shareMessage": "🧭 Qotbnama | Know your ideas better — take a short quiz to discover your approximate political orientation and explore the world's political systems. Free, neutral and no sign-up:",
+    "linkTitle": "Site link",
+    "platformsHint": "Pick a platform to share on:"
+  },
+  "share": {
+    "title": "Share your result",
+    "desc": "Share your result with others or save it as an image.",
+    "shareText": "My political orientation on Qotbnama: {{quadrant}}. Try it yourself!",
+    "copyLink": "Copy link",
+    "copied": "Copied!",
+    "downloadImage": "Download image",
+    "downloadPdf": "Download PDF report",
+    "generating": "Generating…",
+    "native": "Share",
+    "cardTitle": "My Qotbnama result"
+  },
+  "pdf": {
+    "reportTitle": "Qotbnama report",
+    "generatedOn": "Report generated on",
+    "language": "Language",
+    "page": "Page"
+  },
+  "footer": {
+    "tagline": "Know your ideas better.",
+    "disclaimer": "Qotbnama is a neutral educational tool and provides no scientific diagnosis.",
+    "privacy": "All data is processed locally on your own device.",
+    "madeWith": "Made for education",
+    "by": "by",
+    "rights": "All rights reserved to the user.",
+    "contactTitle": "Contact me",
+    "contactDesc": "Feedback, ideas or collaboration? I'd love to hear from you.",
+    "emailLabel": "Email",
+    "methodologyTitle": "Questionnaire methodology",
+    "methodology": "The Qotbnama questionnaire is built on internationally recognized methodologies and instruments: the Political Compass, the Nolan Chart, the World Values Survey (WVS), the European Social Survey (ESS) and Pew Research political values — and follows standard questionnaire-design principles from comparative politics and political psychology (neutral wording, one concept per item, balanced keying)."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "desc": "The address you were looking for does not exist.",
+    "home": "Back to home"
+  }
+}

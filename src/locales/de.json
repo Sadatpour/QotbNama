@@ -1,0 +1,729 @@
+{
+  "meta": {
+    "name": "Qotbnama",
+    "tagline": "Lerne deine Ideen besser kennen.",
+    "description": "Ein Bildungswerkzeug, um deine ungefähre politische Ausrichtung zu entdecken und politische Systeme und Ideologien neutral kennenzulernen."
+  },
+  "nav": {
+    "home": "Start",
+    "intro": "Über",
+    "test": "Test",
+    "education": "Lernen",
+    "map": "Weltkarte",
+    "share": "Teilen",
+    "results": "Ergebnisse"
+  },
+  "common": {
+    "start": "Test starten",
+    "startShort": "Start",
+    "next": "Weiter",
+    "previous": "Zurück",
+    "finish": "Ergebnis ansehen",
+    "back": "Zurück",
+    "backHome": "Zur Startseite",
+    "learnMore": "Mehr erfahren",
+    "retake": "Test wiederholen",
+    "close": "Schließen",
+    "loading": "Wird geladen…",
+    "skip": "Überspringen",
+    "of": "von",
+    "minutes": "Minuten",
+    "readMore": "Mehr lesen",
+    "showLess": "Weniger anzeigen"
+  },
+  "theme": {
+    "toggle": "Hell-/Dunkelmodus umschalten",
+    "light": "Hell",
+    "dark": "Dunkel"
+  },
+  "language": {
+    "label": "Sprache",
+    "select": "Sprache wählen"
+  },
+  "landing": {
+    "badge": "Bildung · Neutral · Ohne Anmeldung",
+    "title": "Entdecke deine politische Ausrichtung",
+    "subtitle": "Beantworte einen kurzen, forschungsbasierten Fragebogen, um zu sehen, wo dein politisches Denken auf der Karte liegt – und lerne dabei die vielen Systeme und Ideologien kennen.",
+    "ctaPrimary": "Test starten",
+    "ctaSecondary": "So funktioniert es",
+    "featuresTitle": "Warum Qotbnama?",
+    "features": {
+      "neutral": {
+        "title": "Völlig neutral",
+        "desc": "Die Fragen beruhen auf etablierten Methoden und urteilen nie über dich."
+      },
+      "private": {
+        "title": "Vollständig privat",
+        "desc": "Es werden keine Daten erhoben. Alles wird lokal auf deinem Gerät verarbeitet."
+      },
+      "educational": {
+        "title": "Spannendes Lernen",
+        "desc": "Erkunde nach dem Test politische Konzepte mit interaktiven Karten und Grafiken."
+      },
+      "visual": {
+        "title": "Visuelle Analyse",
+        "desc": "Dein Ergebnis wird klar mit einem politischen Kompass, einem Radardiagramm und Übersichtskarten dargestellt."
+      }
+    },
+    "stepsTitle": "In drei einfachen Schritten",
+    "steps": {
+      "one": { "title": "Antworten", "desc": "Beantworte 35 Aussagen auf einer Sieben-Punkte-Skala." },
+      "two": { "title": "Ergebnis sehen", "desc": "Finde deine Position auf der politischen Karte und den Diagrammen." },
+      "three": { "title": "Lernen", "desc": "Erkunde die Ideen, die dir am nächsten sind – neutral und klar." }
+    },
+    "disclaimer": "Dies ist eine bildungsbezogene Schätzung, keine wissenschaftliche Diagnose."
+  },
+  "intro": {
+    "title": "Bevor du beginnst",
+    "lead": "Qotbnama hilft dir, deine ungefähre politische Ausrichtung neutral zu verstehen und verschiedene Ideen kennenzulernen.",
+    "purpose": {
+      "title": "Zweck",
+      "desc": "Das Ziel ist bildend: dir zu helfen, politische Konzepte zu verstehen und deine eigene Position in politischen Debatten klarer zu sehen."
+    },
+    "duration": {
+      "title": "Benötigte Zeit",
+      "desc": "Etwa 5 bis 7 Minuten – 35 Aussagen, jede auf einer Sieben-Punkte-Skala beantwortet."
+    },
+    "privacy": {
+      "title": "Privatsphäre",
+      "desc": "Kein Name, keine E-Mail, keine persönlichen Daten nötig. Antworten bleiben auf deinem Gerät und werden nirgendwohin gesendet."
+    },
+    "nature": {
+      "title": "Bildungscharakter",
+      "desc": "Dieser Test ist eine wissenschaftlich-bildende Übung, die zum Nachdenken anregen soll, nicht zum Etikettieren."
+    },
+    "disclaimerTitle": "Wichtiger Hinweis",
+    "disclaimer": "Dies ist eine bildungsbezogene Schätzung und keine wissenschaftliche oder psychologische Diagnose. Dein Ergebnis ist nur eine ungefähre Momentaufnahme deiner Tendenzen zum Zeitpunkt der Beantwortung.",
+    "start": "Fragebogen starten"
+  },
+  "likert": {
+    "0": "Stimme überhaupt nicht zu",
+    "1": "Stimme nicht zu",
+    "2": "Stimme eher nicht zu",
+    "3": "Neutral",
+    "4": "Stimme eher zu",
+    "5": "Stimme zu",
+    "6": "Stimme voll und ganz zu"
+  },
+  "questionnaire": {
+    "progress": "Frage {{current}} von {{total}}",
+    "percent": "{{percent}}% abgeschlossen",
+    "selectHint": "Wähle, wie sehr du zustimmst.",
+    "answered": "Beantwortet",
+    "unanswered": "Unbeantwortet",
+    "mustAnswer": "Bitte beantworte diese Frage, um fortzufahren.",
+    "reviewTitle": "Antworten überprüfen",
+    "incompleteWarning": "{{count}} Frage(n) unbeantwortet. Du kannst fortfahren, aber alle zu beantworten erhöht die Genauigkeit.",
+    "metaSource": "Methodik",
+    "metaDimension": "Dimension",
+    "showMeta": "Methodik anzeigen",
+    "hideMeta": "Methodik ausblenden"
+  },
+  "questions": {
+    "q01": "Der Staat sollte handeln, um die Einkommenskluft zwischen Reich und Arm zu verringern.",
+    "q02": "Freier Wettbewerb und private Unternehmen sind der beste Weg zu Wachstum und Wohlstand.",
+    "q03": "Es ist gerecht, Wohlhabende stärker zu besteuern, um öffentliche Dienste zu finanzieren.",
+    "q04": "Erfolg oder Misserfolg eines Menschen hängt vor allem von seiner eigenen Anstrengung ab.",
+    "q05": "Ordnung und Sicherheit in der Gesellschaft sind wichtiger als manche individuelle Freiheiten.",
+    "q06": "Menschen sollten frei sein, anders zu leben als andere, auch wenn andere das missbilligen.",
+    "q07": "Respekt vor Autorität und Gehorsam gegenüber dem Gesetz sind Grundwerte einer gesunden Gesellschaft.",
+    "q08": "Der Schutz der Privatsphäre der Bürger ist wichtiger als der Ausbau staatlicher Überwachung zur Sicherheit.",
+    "q09": "In einem System zu leben, dessen Führung durch freie Wahlen bestimmt wird, ist sehr wichtig.",
+    "q10": "Ein starker Führer, der ohne Rücksicht auf Wahlen frei entscheiden kann, nützt dem Land.",
+    "q11": "Eine freie Presse und eine unabhängige Justiz sind für eine gute Gesellschaft unerlässlich.",
+    "q12": "Die Rechte von Minderheiten sollten auch gegen den Willen der Mehrheit geschützt werden.",
+    "q13": "Der Staat ist dafür verantwortlich, allen Bürgern einen angemessenen Lebensstandard zu sichern.",
+    "q14": "Die Wirtschaft funktioniert besser, wenn der Staat weniger eingreift und reguliert.",
+    "q15": "Schlüsselindustrien wie Wasser, Strom und Eisenbahn bleiben besser in öffentlichem Eigentum.",
+    "q16": "Unternehmen zu regulieren, um Menschen und Umwelt zu schützen, ist notwendig.",
+    "q17": "Die Gesetze des Landes sollten auf religiösen Grundsätzen und Werten beruhen.",
+    "q18": "Religion und Staat bleiben besser voneinander getrennt.",
+    "q19": "Langjährige Traditionen zu bewahren ist wichtiger, als neuen gesellschaftlichen Wandel anzunehmen.",
+    "q20": "Politik sollte vor allem auf wissenschaftlichen Erkenntnissen und Vernunft beruhen.",
+    "q21": "Der Wohlstand der Gesellschaft sollte gerechter unter allen Menschen verteilt werden.",
+    "q22": "Niedrigere Steuern und ein kleinerer Staat sind gut für die Wirtschaft.",
+    "q23": "Der Anteil der Arbeitnehmer am Unternehmensgewinn ist wichtiger als der Gewinn der Eigentümer.",
+    "q24": "Harte Strafen sind der beste Weg, um Kriminalität in der Gesellschaft zu verringern.",
+    "q25": "Erwachsene sollten in ihrem Privatleben frei entscheiden dürfen, solange niemand anderes geschädigt wird.",
+    "q26": "Wenn die Sicherheit bedroht ist, ist eine vorübergehende Einschränkung mancher Freiheiten akzeptabel.",
+    "q27": "Solange die Dinge gut laufen, ist es nicht so wichtig, wie und von wem Entscheidungen getroffen werden.",
+    "q28": "Alle Bürger sollten ihre politische Meinung frei äußern können, auch gegen die Machthaber.",
+    "q29": "In einer Krise sollten das Militär oder Fachleute statt gewählter Politiker entscheiden.",
+    "q30": "Die Menschen sollten stärker als der Staat für die Deckung ihrer eigenen Bedürfnisse (wie Rente und Gesundheit) verantwortlich sein.",
+    "q31": "Der Staat sollte die Preise für Grundgüter kontrollieren, um die Menschen zu schützen.",
+    "q32": "Die Übertragung staatlicher Unternehmen an den privaten Sektor nützt der Gesellschaft meist.",
+    "q33": "Die Vermittlung religiöser Werte sollte Teil des Lehrplans öffentlicher Schulen sein.",
+    "q34": "Gesetze zu Familie und Moral sollten durch gesellschaftlichen Konsens festgelegt werden, nicht durch religiöse Vorgaben.",
+    "q35": "Die Bewahrung der traditionellen Werte und Identität der Gesellschaft sollte eine Priorität des Staates sein."
+  },
+  "dimensions": {
+    "economic": {
+      "name": "Wirtschaft",
+      "negative": "Links",
+      "positive": "Rechts",
+      "description": "Deine Sicht auf Märkte, Einkommensgleichheit und Eigentum in der Wirtschaft."
+    },
+    "social": {
+      "name": "Gesellschaft",
+      "negative": "Libertär",
+      "positive": "Autoritär",
+      "description": "Wie du individuelle Freiheit gegen gesellschaftliche Ordnung und Autorität abwägst."
+    },
+    "democratic": {
+      "name": "Demokratisch",
+      "negative": "Nicht-demokratisch",
+      "positive": "Demokratisch",
+      "description": "Dein Bekenntnis zu Wahlen, Pressefreiheit und Minderheitenrechten."
+    },
+    "state": {
+      "name": "Rolle des Staates",
+      "negative": "Freier Markt",
+      "positive": "Staatliches Eingreifen",
+      "description": "Deine Präferenz zwischen freiem Markt und staatlicher Beteiligung an der Wohlfahrt."
+    },
+    "secular": {
+      "name": "Religion & Staat",
+      "negative": "Traditionell / religiös",
+      "positive": "Säkular",
+      "description": "Deine Sicht auf die Rolle der Religion in Gesetzgebung und öffentlichem Leben."
+    }
+  },
+  "results": {
+    "title": "Dein Ergebnis",
+    "subtitle": "Ein ungefähres Bild deiner politischen Ausrichtung zum Zeitpunkt der Beantwortung.",
+    "completedOn": "Abgeschlossen am",
+    "answered": "{{answered}} von {{total}} Fragen beantwortet",
+    "compassTitle": "Politischer Kompass",
+    "compassHint": "Horizontal: Wirtschaft (links ↔ rechts) — Vertikal: Gesellschaft (libertär ↔ autoritär)",
+    "yourPosition": "Deine Position",
+    "radarTitle": "Übersicht der Dimensionen",
+    "barsTitle": "Dimension für Dimension",
+    "summaryTitle": "Ergebniszusammenfassung",
+    "analysisTitle": "Detaillierte Analyse",
+    "whyTitle": "Warum dieses Ergebnis?",
+    "whyDesc": "Dein Ergebnis ergibt sich aus der Summe deiner Antworten. Jede Antwort wird nach Gewicht und Richtung ihrer Frage innerhalb der jeweiligen Dimension gewichtet.",
+    "contributorsTitle": "Einflussreichste Antworten",
+    "contributorsDesc": "Diese Antworten haben am meisten zu deiner Position beigetragen:",
+    "strengthsTitle": "Klare Tendenzen",
+    "strengthsDesc": "Dimensionen, in denen du eine deutlichere Tendenz gezeigt hast.",
+    "limitsTitle": "Grenzen",
+    "limitsDesc": "Dies ist eine bildungsbezogene Schätzung und kann die volle Komplexität deiner Ansichten nicht erfassen. Antworten können sich mit Zeit und Kontext ändern.",
+    "recommendedTitle": "Für dich empfohlen",
+    "recommendedDesc": "Diese Konzepte liegen nahe an deiner aktuellen Position; sie zu erkunden rundet dein Verständnis ab.",
+    "leanStrong": "Starke Tendenz",
+    "leanModerate": "Mäßige Tendenz",
+    "leanCenter": "Nahe der Mitte",
+    "towards": "in Richtung {{pole}}",
+    "centerLabel": "Ausgewogen",
+    "noResultTitle": "Noch kein Ergebnis",
+    "noResultDesc": "Beantworte zuerst den Fragebogen, um dein Ergebnis zu sehen.",
+    "quadrants": {
+      "centrist": "Zentristisch",
+      "libertarian-left": "Libertär Links",
+      "libertarian-right": "Libertär Rechts",
+      "authoritarian-left": "Autoritär Links",
+      "authoritarian-right": "Autoritär Rechts"
+    },
+    "quadrantDesc": {
+      "centrist": "Deine Ansichten halten die Balance zwischen den verschiedenen Polen und liegen nahe der Mitte.",
+      "libertarian-left": "Du schätzt wirtschaftliche Gleichheit zusammen mit persönlichen Freiheiten.",
+      "libertarian-right": "Du schätzt freie Märkte zusammen mit persönlichen Freiheiten.",
+      "authoritarian-left": "Du neigst zu wirtschaftlicher Gleichheit mit einer stärkeren Rolle von Ordnung und Autorität.",
+      "authoritarian-right": "Du neigst zu freien Märkten mit Betonung auf gesellschaftlicher Ordnung und Autorität."
+    }
+  },
+  "education": {
+    "title": "Politische Bildung",
+    "subtitle": "Lerne die Schlüsselkonzepte der Politik in einfacher, neutraler Sprache.",
+    "searchPlaceholder": "Konzept suchen…",
+    "all": "Alle",
+    "noResults": "Nichts gefunden.",
+    "recommendedBadge": "Für dich empfohlen",
+    "categories": {
+      "systems": "Regierungssysteme",
+      "ideologies": "Ideologien",
+      "economics": "Wirtschaftssysteme",
+      "structures": "Staatsstrukturen"
+    },
+    "fields": {
+      "definition": "Definition",
+      "history": "Geschichte",
+      "advantages": "Vorteile",
+      "criticisms": "Kritik",
+      "examples": "Reale Beispiele",
+      "misconceptions": "Verbreitete Irrtümer"
+    },
+    "quizTitle": "Kurzes Quiz",
+    "quizCorrect": "Richtig!",
+    "quizWrong": "Versuch es noch einmal.",
+    "topics": {
+      "democracy": {
+        "title": "Demokratie",
+        "summary": "Eine Regierung, deren Macht aus den Stimmen des Volkes hervorgeht.",
+        "definition": "Demokratie ist ein System, in dem Bürger – direkt oder über gewählte Vertreter – an öffentlichen Entscheidungen teilhaben und politische Macht ihre Legitimität aus dem Volk bezieht.",
+        "history": "Das Wort geht auf das antike Athen (5. Jh. v. Chr.) zurück. Ihre moderne Form, die repräsentative Demokratie, verbreitete sich ab dem 18. und 19. Jahrhundert nach der amerikanischen und französischen Revolution.",
+        "advantages": [
+          "Herrschende sind dem Volk gegenüber rechenschaftspflichtig",
+          "Macht kann friedlich wechseln",
+          "Rechte und Freiheiten der Bürger werden geschützt"
+        ],
+        "criticisms": [
+          "Gefahr einer 'Tyrannei der Mehrheit' über Minderheiten",
+          "Langsame Entscheidungsfindung in Krisen",
+          "Anfälligkeit für Populismus"
+        ],
+        "examples": ["Schweiz", "Indien", "Kanada"],
+        "misconceptions": [
+          "Demokratie bedeute nur Wählen; tatsächlich gehören auch Minderheitenrechte und eine Verfassung dazu.",
+          "Demokratie garantiere stets die beste Entscheidung; in der Praxis garantiert sie nur den Prozess der Teilhabe."
+        ]
+      },
+      "republic": {
+        "title": "Republik",
+        "summary": "Ein System, dessen Staatsoberhaupt nicht erblich und meist gewählt ist.",
+        "definition": "Eine Republik ist eine Regierungsform, in der die Macht beim Volk oder seinen Vertretern liegt und das Staatsoberhaupt gewählt wird, statt ein erblicher Monarch zu sein.",
+        "history": "Frühe Beispiele finden sich im antiken Rom und in den italienischen Stadtstaaten. Das moderne Konzept entstand mit der amerikanischen (1776) und französischen (1792) Revolution.",
+        "advantages": [
+          "Keine erbliche Hierarchie an der Spitze der Macht",
+          "Betonung von Bürgerschaft und Rechtsstaatlichkeit",
+          "Führung kann regelmäßig wechseln"
+        ],
+        "criticisms": [
+          "Republik allein garantiert keine Freiheit",
+          "Kann zu einem Einparteien- oder autoritären System werden"
+        ],
+        "examples": ["Frankreich", "Deutschland", "Brasilien"],
+        "misconceptions": [
+          "Jede Republik sei demokratisch; tatsächlich halten manche Republiken keine freien Wahlen ab.",
+          "Republik und Demokratie seien dasselbe; die beiden Begriffe sind jedoch verschieden."
+        ]
+      },
+      "constitutional-monarchy": {
+        "title": "Konstitutionelle Monarchie",
+        "summary": "Ein Monarch, dessen Macht durch eine Verfassung begrenzt ist.",
+        "definition": "In einer konstitutionellen Monarchie symbolisiert der König oder die Königin die Nation, doch die wirkliche Macht liegt beim Parlament und einer gewählten Regierung, und eine Verfassung begrenzt die Befugnisse des Monarchen.",
+        "history": "Sie begann mit Englands Glorreicher Revolution (1688) und der Bill of Rights (1689) und wurde zum Vorbild für viele Länder.",
+        "advantages": [
+          "Symbolische Kontinuität und Stabilität",
+          "Zeremonielle Rolle von der Exekutivmacht getrennt",
+          "Eine Verbindung von Tradition und Demokratie"
+        ],
+        "criticisms": [
+          "Ein erbliches Amt wird als Widerspruch zur Gleichheit gesehen",
+          "Die Kosten der Monarchie"
+        ],
+        "examples": ["Vereinigtes Königreich", "Japan", "Schweden"],
+        "misconceptions": [
+          "Der Monarch habe echte Exekutivmacht; in den meisten dieser Systeme ist die Rolle zeremoniell."
+        ]
+      },
+      "absolute-monarchy": {
+        "title": "Absolute Monarchie",
+        "summary": "Ein Monarch, in dem die Macht konzentriert und unkontrolliert ist.",
+        "definition": "In einer absoluten Monarchie liegt alle oder fast alle politische Macht beim Monarchen, und gewählte Institutionen oder eine Verfassung setzen ihm keine ernsthafte Grenze.",
+        "history": "Sie war im Europa des 17. und 18. Jahrhunderts verbreitet; Ludwig XIV. von Frankreich mit dem Ausspruch 'Der Staat bin ich' ist ihr Symbol.",
+        "advantages": [
+          "Schnelle, einheitliche Entscheidungsfindung",
+          "Langfristige Kontinuität der Führung"
+        ],
+        "criticisms": [
+          "Mangel an Rechenschaft und Machtkontrolle",
+          "Gefahr von Tyrannei und Rechtsverletzungen"
+        ],
+        "examples": ["Saudi-Arabien", "Oman", "Brunei"],
+        "misconceptions": [
+          "Die absolute Monarchie gehöre der Vergangenheit an; dennoch gibt es noch Beispiele dafür."
+        ]
+      },
+      "parliamentary": {
+        "title": "Parlamentarisches System",
+        "summary": "Die Exekutive geht aus dem Parlament hervor und ist ihm gegenüber verantwortlich.",
+        "definition": "In einem parlamentarischen System wird der Regierungschef (Premierminister) aus den Abgeordneten des Parlaments gewählt, und die Regierung bleibt nur im Amt, solange sie das Vertrauen des Parlaments hat.",
+        "history": "Dieses Modell entwickelte sich in Großbritannien und verbreitete sich in viele europäische und Commonwealth-Länder.",
+        "advantages": [
+          "Abstimmung zwischen Legislative und Exekutive",
+          "Eine ineffektive Regierung kann durch ein Misstrauensvotum abgesetzt werden",
+          "Mehr Flexibilität in politischen Krisen"
+        ],
+        "criticisms": [
+          "Mögliche Instabilität von Koalitionsregierungen",
+          "Machtkonzentration in der Mehrheitspartei"
+        ],
+        "examples": ["Deutschland", "Indien", "Vereinigtes Königreich"],
+        "misconceptions": [
+          "Der Premierminister werde wie ein Präsident direkt gewählt; meist ist das nicht der Fall."
+        ]
+      },
+      "presidential": {
+        "title": "Präsidentielles System",
+        "summary": "Der Präsident wird getrennt gewählt und leitet die Exekutive.",
+        "definition": "In einem präsidentiellen System wird der Präsident getrennt gewählt, ist zugleich Staats- und Regierungschef, und die Exekutive arbeitet unabhängig von der Legislative.",
+        "history": "Sein Vorbild ist die Verfassung der Vereinigten Staaten (1787), die die Gewaltenteilung betont.",
+        "advantages": [
+          "Klare Gewaltenteilung",
+          "Stabilität der Amtszeit des Präsidenten",
+          "Direkte Wahl des Exekutivchefs"
+        ],
+        "criticisms": [
+          "Gefahr einer Blockade zwischen Präsident und Parlament",
+          "Machtkonzentration in einer Person"
+        ],
+        "examples": ["Vereinigte Staaten", "Brasilien", "Indonesien"],
+        "misconceptions": [
+          "Jedes Land mit einem Präsidenten sei präsidentiell; manche sind semipräsidentiell oder parlamentarisch."
+        ]
+      },
+      "authoritarianism": {
+        "title": "Autoritarismus",
+        "summary": "Konzentrierte Macht und eingeschränkte politische Freiheiten.",
+        "definition": "Autoritarismus ist ein System, in dem die Macht in einer Person oder einer kleinen Gruppe konzentriert ist und politische Teilhabe und Bürgerrechte stark eingeschränkt sind.",
+        "history": "Beispiele waren im 20. Jahrhundert zahlreich und reichten von Militär- bis zu Einparteienregimen.",
+        "advantages": [
+          "Schnelle Entscheidungsfindung",
+          "Scheinbare kurzfristige Stabilität"
+        ],
+        "criticisms": [
+          "Mangel an Rechenschaft und Freiheit",
+          "Unterdrückung von Gegnern",
+          "Korruption durch fehlende Aufsicht"
+        ],
+        "examples": ["Zahlreiche historische Fälle in Asien, Afrika und Lateinamerika"],
+        "misconceptions": [
+          "Autoritarismus sei dasselbe wie Totalitarismus; doch Totalitarismus ist extremer und umfassender."
+        ]
+      },
+      "totalitarianism": {
+        "title": "Totalitarismus",
+        "summary": "Totale staatliche Kontrolle über alle Lebensbereiche.",
+        "definition": "Totalitarismus ist eine extreme Form des Autoritarismus, in der der Staat die totale Kontrolle über jeden Bereich des öffentlichen und privaten Lebens anstrebt, von der Wirtschaft bis zu Denken und Kultur.",
+        "history": "Der Begriff wurde besonders zur Beschreibung bestimmter Regime des 20. Jahrhunderts in den 1930er und 1940er Jahren verwendet.",
+        "advantages": [
+          "(Analytisch) groß angelegte Mobilisierung von Ressourcen für Staatsziele"
+        ],
+        "criticisms": [
+          "Weitreichende Menschenrechtsverletzungen",
+          "Vollständige Beseitigung von Freiheit und Pluralismus",
+          "Erzwungene Ideologie und Repression"
+        ],
+        "examples": ["In der Politikwissenschaft untersuchte historische Fälle"],
+        "misconceptions": [
+          "Jede strenge Regierung sei totalitär; Totalitarismus hat spezifische, allumfassende Merkmale."
+        ]
+      },
+      "liberalism": {
+        "title": "Liberalismus",
+        "summary": "Betonung von individueller Freiheit, Rechten und Rechtsstaatlichkeit.",
+        "definition": "Liberalismus ist ein Gedankengebäude, das individuelle Freiheit, Gleichheit vor dem Gesetz, Menschenrechte und die Begrenzung der Staatsmacht betont.",
+        "history": "Er entstand aus der Aufklärung des 18. Jahrhunderts und Denkern wie John Locke und prägte die amerikanische und französische Revolution.",
+        "advantages": [
+          "Schutz individueller Freiheiten",
+          "Rechtsstaatlichkeit und gleiche Rechte",
+          "Fördert Innovation und Pluralismus"
+        ],
+        "criticisms": [
+          "Kann wirtschaftliche Ungleichheit übersehen",
+          "Die Betonung des Individuums kann zulasten der gesellschaftlichen Solidarität gehen"
+        ],
+        "examples": ["Liberale Demokratien in Europa und Nordamerika"],
+        "misconceptions": [
+          "Liberalismus bedeute im alltäglichen amerikanischen Sprachgebrauch 'links'; im klassischen Sinn betont er jedoch auch freie Märkte."
+        ]
+      },
+      "conservatism": {
+        "title": "Konservatismus",
+        "summary": "Wertschätzung von Tradition, Stabilität und allmählichem Wandel.",
+        "definition": "Konservatismus ist eine Strömung, die die Bewahrung etablierter Institutionen und Werte, gesellschaftliche Stabilität und maßvollen, allmählichen Wandel betont.",
+        "history": "Er nahm Gestalt als Reaktion auf die Französische Revolution an; Edmund Burke ist einer seiner ersten Theoretiker.",
+        "advantages": [
+          "Bewahrt Stabilität und sozialen Zusammenhalt",
+          "Vorsicht gegenüber raschem Wandel",
+          "Achtung vor historischer Erfahrung"
+        ],
+        "criticisms": [
+          "Kann notwendige Reformen behindern",
+          "Kann bestehende Ungleichheiten bewahren"
+        ],
+        "examples": ["Konservative Parteien im Vereinigten Königreich und in Deutschland"],
+        "misconceptions": [
+          "Konservatismus bedeute, jeden Wandel abzulehnen; tatsächlich betont er allmählichen Wandel."
+        ]
+      },
+      "socialism": {
+        "title": "Sozialismus",
+        "summary": "Betonung von gemeinschaftlichem Eigentum und wirtschaftlicher Gleichheit.",
+        "definition": "Sozialismus ist eine Reihe von Ideen, die gesellschaftliches oder gemeinschaftliches Eigentum an den Produktionsmitteln und die Verringerung wirtschaftlicher Ungleichheit betonen.",
+        "history": "Er entstand im Gefolge der industriellen Revolution des 19. Jahrhunderts und als Reaktion auf deren Ungleichheiten.",
+        "advantages": [
+          "Betonung der Verringerung von Ungleichheit",
+          "Bereitstellung universeller Dienste",
+          "Aufmerksamkeit für Arbeitnehmerrechte"
+        ],
+        "criticisms": [
+          "Gefahr verringerter wirtschaftlicher Anreize",
+          "Mögliche Machtkonzentration beim Staat"
+        ],
+        "examples": ["Sozialistische Parteien und Sozialpolitik in Europa"],
+        "misconceptions": [
+          "Sozialismus sei dasselbe wie Kommunismus; tatsächlich reicht er von demokratischen bis zu revolutionären Strömungen."
+        ]
+      },
+      "social-democracy": {
+        "title": "Sozialdemokratie",
+        "summary": "Verbindung von freiem Markt mit Sozialstaat und Demokratie.",
+        "definition": "Die Sozialdemokratie strebt an, eine Marktwirtschaft mit umfassender Sozialpolitik, sozialem Schutz und parlamentarischer Demokratie zu verbinden.",
+        "history": "Sie entwickelte sich in Europa, besonders in den skandinavischen Ländern, im späten 19. und im 20. Jahrhundert.",
+        "advantages": [
+          "Balance zwischen Wirtschaftswachstum und sozialer Gerechtigkeit",
+          "Starke öffentliche Dienste",
+          "Bekenntnis zur Demokratie"
+        ],
+        "criticisms": [
+          "Hohe Steuerlast",
+          "Herausforderung, Wohlfahrt langfristig zu finanzieren"
+        ],
+        "examples": ["Schweden", "Dänemark", "Norwegen"],
+        "misconceptions": [
+          "Sozialdemokratie bedeute vollständigen Sozialismus; sie behält jedoch den freien Markt bei."
+        ]
+      },
+      "communism": {
+        "title": "Kommunismus",
+        "summary": "Das Ideal einer klassenlosen Gesellschaft mit Gemeineigentum.",
+        "definition": "Kommunismus ist eine Idee, die eine klassenlose Gesellschaft ohne Privateigentum an den Produktionsmitteln anstrebt, in der Ressourcen gemeinschaftlich verwaltet werden.",
+        "history": "Er nahm Gestalt aus den Ideen von Karl Marx und Friedrich Engels im 19. Jahrhundert an und führte im 20. Jahrhundert zu Revolutionen.",
+        "advantages": [
+          "(In der Theorie) vollständige wirtschaftliche Gleichheit",
+          "Betonung der Abschaffung sozialer Klassen"
+        ],
+        "criticisms": [
+          "In der Praxis führte er oft zu Machtkonzentration und Repression",
+          "Verringerte Anreize und wirtschaftliche Effizienz"
+        ],
+        "examples": ["Historische Fälle im 20. Jahrhundert"],
+        "misconceptions": [
+          "Kommunismus und Sozialismus seien dasselbe; Kommunismus ist eine idealisiertere und radikalere Form."
+        ]
+      },
+      "fascism": {
+        "title": "Faschismus",
+        "summary": "Extremer Nationalismus und starker Autoritarismus.",
+        "definition": "Faschismus ist eine autoritäre Ideologie, die extremen Nationalismus, eine mächtige Führung, die Unterdrückung von Gegnern und die Überlegenheit der Nation oder Rasse betont.",
+        "history": "Er entstand im Europa der Zwischenkriegszeit (den 1920er und 1930er Jahren).",
+        "advantages": [
+          "(Aus rein historisch-analytischer Sicht) groß angelegte nationale und propagandistische Mobilisierung"
+        ],
+        "criticisms": [
+          "Unterdrückung von Freiheit und Menschenrechten",
+          "Gewalt und Kriegstreiberei",
+          "Beseitigung von Pluralismus und Gegnern"
+        ],
+        "examples": ["In der Politikwissenschaft untersuchte historische Regime"],
+        "misconceptions": [
+          "Faschismus sei bloß die 'wirtschaftlich extreme Rechte'; sein Kernbestandteil ist jedoch autoritärer Nationalismus."
+        ]
+      },
+      "anarchism": {
+        "title": "Anarchismus",
+        "summary": "Ablehnung von Zwangsherrschaft und staatlicher Hierarchie.",
+        "definition": "Anarchismus ist ein Gedankengebäude, das die Zwangsgewalt des Staates ablehnt und eine Gesellschaft auf Basis freiwilliger Zusammenarbeit und Selbstverwaltung sucht.",
+        "history": "Er nahm im 19. Jahrhundert mit Denkern wie Proudhon und Bakunin Gestalt an.",
+        "advantages": [
+          "Betonung von Freiheit und Autonomie",
+          "Ablehnung konzentrierter Macht"
+        ],
+        "criticisms": [
+          "Zweifel an der Umsetzbarkeit in großen Gesellschaften",
+          "Gefahr von Unordnung bei Fehlen von Institutionen"
+        ],
+        "examples": ["Begrenzte historische Bewegungen und Experimente"],
+        "misconceptions": [
+          "Anarchismus bedeute Chaos; tatsächlich verweist er auf Ordnung ohne Zwangsherrschaft."
+        ]
+      },
+      "secularism": {
+        "title": "Säkularismus",
+        "summary": "Trennung der Institution Religion vom Staat.",
+        "definition": "Säkularismus ist das Prinzip der Trennung von Religion und Staat, wonach öffentliche Institutionen unabhängig von religiöser Autorität geführt werden sollen, während die Glaubensfreiheit garantiert ist.",
+        "history": "Er ist in der Aufklärung verwurzelt und kommt in der französischen Verfassung (Laizität) und in den Vereinigten Staaten zum Ausdruck.",
+        "advantages": [
+          "Neutralität des Staates gegenüber Religionen und Überzeugungen",
+          "Schutz von Religionsfreiheit und Gewissen",
+          "Verringerte religiöse Spannungen in der Regierung"
+        ],
+        "criticisms": [
+          "Manche sehen ihn im Widerspruch zur öffentlichen Rolle der Religion",
+          "Die Grenze zwischen Religion und Staat zu ziehen ist nicht immer einfach"
+        ],
+        "examples": ["Frankreich", "Indien", "Türkei (historisch)"],
+        "misconceptions": [
+          "Säkularismus bedeute Feindschaft gegenüber der Religion; tatsächlich verweist er auf staatliche Neutralität, nicht auf die Leugnung des Glaubens."
+        ]
+      },
+      "capitalism": {
+        "title": "Kapitalismus",
+        "summary": "Eine Wirtschaft auf Basis von Privateigentum und freien Märkten.",
+        "definition": "Kapitalismus ist ein Wirtschaftssystem, in dem die Produktionsmittel in Privateigentum stehen und Preise, Produktion und Verteilung über freie Märkte und Wettbewerb bestimmt werden.",
+        "history": "Er verbreitete sich von der industriellen Revolution des 18. und 19. Jahrhunderts; Adam Smith ist einer seiner wichtigsten Theoretiker.",
+        "advantages": [
+          "Fördert Innovation und Unternehmertum",
+          "Effizienz bei der Ressourcenverteilung",
+          "Freiheit der wirtschaftlichen Wahl"
+        ],
+        "criticisms": [
+          "Mögliche Zunahme der Ungleichheit",
+          "Periodische Marktinstabilität",
+          "Wenig Beachtung sozialer und ökologischer Kosten"
+        ],
+        "examples": ["Marktwirtschaften weltweit"],
+        "misconceptions": [
+          "Kapitalismus bedeute gar keine Regulierung; tatsächlich verbinden die meisten Volkswirtschaften Markt und Regulierung."
+        ]
+      },
+      "welfare-state": {
+        "title": "Sozialstaat",
+        "summary": "Die Rolle des Staates bei Wohlfahrt und öffentlichen Diensten.",
+        "definition": "Ein Sozialstaat ist ein Modell, in dem der Staat eine wesentliche Verantwortung für Bildung, Gesundheit, Renten und sozialen Schutz der Bürger übernimmt.",
+        "history": "Er begann im späten 19. Jahrhundert in Deutschland und breitete sich nach dem Zweiten Weltkrieg in Europa aus.",
+        "advantages": [
+          "Verringert Armut und Ungleichheit",
+          "Universeller Zugang zu Grunddiensten",
+          "Größere soziale Sicherheit"
+        ],
+        "criticisms": [
+          "Hohe Kosten und Steuerlast",
+          "Bedenken hinsichtlich verringerter Anreize"
+        ],
+        "examples": ["Die skandinavischen Länder", "Deutschland", "Frankreich"],
+        "misconceptions": [
+          "Ein Sozialstaat bedeute Sozialismus; er ist jedoch auch mit einer Marktwirtschaft vereinbar."
+        ]
+      },
+      "federalism": {
+        "title": "Föderalismus",
+        "summary": "Aufteilung der Macht zwischen Zentralregierung und lokalen Einheiten.",
+        "definition": "Föderalismus ist ein System, in dem die Macht zwischen einer Zentralregierung und regionalen Einheiten (Bundesländern) aufgeteilt ist, wobei jede Ebene ihre eigene Zuständigkeit hat.",
+        "history": "Sein modernes Modell nahm mit der Verfassung der Vereinigten Staaten (1787) Gestalt an.",
+        "advantages": [
+          "Verteilt Macht und verringert Konzentration",
+          "Flexibilität für regionale Vielfalt",
+          "Größere lokale Teilhabe"
+        ],
+        "criticisms": [
+          "Mögliche Uneinheitlichkeit zwischen Regionen",
+          "Rechtliche und administrative Komplexität"
+        ],
+        "examples": ["Vereinigte Staaten", "Deutschland", "Schweiz"],
+        "misconceptions": [
+          "Föderalismus bedeute Separatismus; tatsächlich ist er ein Weg, Einheit bei gleichzeitiger Vielfalt zu wahren."
+        ]
+      },
+      "unitary-state": {
+        "title": "Zentralstaat",
+        "summary": "Konzentration der Macht in der Zentralregierung.",
+        "definition": "In einem Zentralstaat liegt die Hauptmacht bei der Zentralregierung, und lokale Einheiten leiten ihre Befugnisse vom Zentrum ab, das sie ändern kann.",
+        "history": "Er ist die häufigste Form der Staatsorganisation der Welt und in zentralisierten europäischen Nationalstaaten verwurzelt.",
+        "advantages": [
+          "Einheitlichkeit in Gesetzgebung und Politik",
+          "Koordination und administrative Einfachheit"
+        ],
+        "criticisms": [
+          "Mögliche Vernachlässigung lokaler Unterschiede",
+          "Übermäßige Machtkonzentration"
+        ],
+        "examples": ["Frankreich", "Japan", "Iran"],
+        "misconceptions": [
+          "Ein Zentralstaat bedeute keine lokale Regierung; tatsächlich gibt es lokale Regierungen, aber ihre Macht leitet sich vom Zentrum ab."
+        ]
+      }
+    }
+  },
+  "map": {
+    "eyebrow": "Interaktive Karte",
+    "title": "Regierungssysteme weltweit",
+    "subtitle": "Fahre über ein Land oder tippe es an, um sein Regierungssystem und wichtige Fakten zu sehen.",
+    "hoverHint": "Fahre über die Länder, um ihre Details anzuzeigen.",
+    "tapHint": "Tippe ein Land an, um seine Details anzuzeigen.",
+    "selectPrompt": "Wähle ein Land",
+    "selectPromptDesc": "Wähle ein Land auf der Karte, um sein Regierungssystem, Hauptstadt, Bevölkerung und Region zu sehen.",
+    "capital": "Hauptstadt",
+    "population": "Bevölkerung",
+    "region": "Region",
+    "system": "Regierungssystem",
+    "legendTitle": "Legende der Systeme",
+    "notAvailable": "Keine Daten verfügbar",
+    "reset": "Ansicht zurücksetzen",
+    "zoomIn": "Vergrößern",
+    "zoomOut": "Verkleinern",
+    "people": "Menschen",
+    "disclaimer": "Die Angaben sind ungefähr und dienen Bildungszwecken. Die Systemklassifikationen sind allgemein und neutral."
+  },
+  "systems": {
+    "presidential": { "label": "Präsidialrepublik", "desc": "Der Präsident ist sowohl Staats- als auch Regierungschef und wird getrennt vom Parlament gewählt." },
+    "semi-presidential": { "label": "Semipräsidentielle Republik", "desc": "Die Exekutivmacht teilen sich ein gewählter Präsident und ein dem Parlament verantwortlicher Premierminister." },
+    "parliamentary-republic": { "label": "Parlamentarische Republik", "desc": "Die Exekutive geht aus dem Parlament hervor und ist ihm verantwortlich; das Staatsoberhaupt ist weitgehend zeremoniell." },
+    "constitutional-monarchy": { "label": "Konstitutionelle Monarchie", "desc": "Ein Monarch symbolisiert die Nation, während die wirkliche Macht beim Parlament und einer gewählten Regierung liegt." },
+    "absolute-monarchy": { "label": "Absolute Monarchie", "desc": "Die meiste Macht ist beim Monarchen konzentriert, ohne ernsthafte verfassungsmäßige Grenzen." },
+    "one-party": { "label": "Einparteienstaat", "desc": "Eine einzige Partei hält die politische Macht." },
+    "theocratic": { "label": "Theokratische Republik", "desc": "Religiöse Grundsätze spielen eine zentrale Rolle in der Struktur von Regierung und Recht." },
+    "directorial": { "label": "Direktorialrepublik", "desc": "Die Exekutivmacht liegt bei einem kollektiven Rat statt bei einer einzelnen Person." },
+    "provisional": { "label": "Übergangsregierung", "desc": "Die Regierung befindet sich in einer Übergangs- oder Interimsphase." },
+    "territory": { "label": "Abhängiges Gebiet", "desc": "Ein abhängiger oder autonomer Teil eines anderen Landes." },
+    "disputed": { "label": "Umstrittener Status", "desc": "Sein politischer Status oder seine Anerkennung ist umstritten." },
+    "none": { "label": "Keine ständige Regierung", "desc": "Ein Gebiet ohne ständige Bevölkerung oder nationale Regierung." }
+  },
+  "regions": {
+    "asia": "Asien",
+    "europe": "Europa",
+    "africa": "Afrika",
+    "north-america": "Nordamerika",
+    "south-america": "Südamerika",
+    "oceania": "Ozeanien",
+    "antarctica": "Antarktis"
+  },
+  "shareSite": {
+    "eyebrow": "Weitersagen",
+    "title": "Qotbnama teilen",
+    "subtitle": "Stelle dieses Bildungswerkzeug anderen vor — in jedem sozialen Netzwerk oder Messenger.",
+    "ogTitle": "Qotbnama | Lerne deine Ideen besser kennen",
+    "description": "Qotbnama ist ein kostenloses, neutrales Bildungswerkzeug: Mach einen kurzen Test, um deine ungefähre politische Ausrichtung zu entdecken, und lerne die politischen Systeme und Ideologien der Welt kennen — ohne Anmeldung, vollständig privat.",
+    "shareMessage": "🧭 Qotbnama | Lerne deine Ideen besser kennen — mach einen kurzen Test, um deine ungefähre politische Ausrichtung zu entdecken und die politischen Systeme der Welt zu erkunden. Kostenlos, neutral und ohne Anmeldung:",
+    "linkTitle": "Website-Link",
+    "platformsHint": "Wähle eine Plattform zum Teilen:"
+  },
+  "share": {
+    "title": "Ergebnis teilen",
+    "desc": "Teile dein Ergebnis mit anderen oder speichere es als Bild.",
+    "shareText": "Meine politische Ausrichtung auf Qotbnama: {{quadrant}}. Probier es selbst aus!",
+    "copyLink": "Link kopieren",
+    "copied": "Kopiert!",
+    "downloadImage": "Bild herunterladen",
+    "downloadPdf": "PDF-Bericht herunterladen",
+    "generating": "Wird erstellt…",
+    "native": "Teilen",
+    "cardTitle": "Mein Qotbnama-Ergebnis"
+  },
+  "pdf": {
+    "reportTitle": "Qotbnama-Bericht",
+    "generatedOn": "Bericht erstellt am",
+    "language": "Sprache",
+    "page": "Seite"
+  },
+  "footer": {
+    "tagline": "Lerne deine Ideen besser kennen.",
+    "disclaimer": "Qotbnama ist ein neutrales Bildungswerkzeug und stellt keine wissenschaftliche Diagnose.",
+    "privacy": "Alle Daten werden lokal auf deinem Gerät verarbeitet.",
+    "madeWith": "Für die Bildung gemacht",
+    "by": "von",
+    "rights": "Alle Rechte beim Nutzer.",
+    "contactTitle": "Kontakt",
+    "contactDesc": "Feedback, Ideen oder Zusammenarbeit? Ich freue mich von dir zu hören.",
+    "emailLabel": "E-Mail",
+    "methodologyTitle": "Methodik des Fragebogens",
+    "methodology": "Der Qotbnama-Fragebogen basiert auf international anerkannten Methoden und Instrumenten: dem Political Compass, dem Nolan-Diagramm, dem World Values Survey (WVS), dem European Social Survey (ESS) und den politischen Werten von Pew Research – und folgt den Standardprinzipien der Fragebogengestaltung aus vergleichender Politikwissenschaft und politischer Psychologie (neutrale Formulierung, ein Konzept pro Frage, ausgewogene Kodierung)."
+  },
+  "notFound": {
+    "title": "Seite nicht gefunden",
+    "desc": "Die gesuchte Adresse existiert nicht.",
+    "home": "Zur Startseite"
+  }
+}
