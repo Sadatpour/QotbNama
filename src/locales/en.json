@@ -726,16 +726,24 @@
     "desc": "The address you were looking for does not exist.",
     "home": "Back to home"
   },
-  "stats": {
-    "title": "Assessment Report",
-    "subtitle": "Quiz completion stats on this device",
-    "totalCompletions": "times completed",
-    "avgEconomic": "Avg. economic axis",
-    "avgSocial": "Avg. social axis",
-    "quadrantDist": "Quadrant distribution",
-    "yourResult": "In most assessments you landed in the \"{{quadrant}}\" quadrant.",
-    "shareLink": "Share your result",
-    "viewFull": "View full report"
+  "history": {
+    "title": "Your Previous Assessments",
+    "subtitle": "{{count}} previous attempt(s) on this device",
+    "compareTitle": "Comparison with your last attempt",
+    "previous": "Previous",
+    "current": "Current",
+    "economic": "Economic",
+    "social": "Social",
+    "eco": "Eco:",
+    "soc": "Soc:",
+    "allPrevious": "All previous attempts",
+    "latestPrev": "Latest",
+    "changeNote": "{{eco}} · {{soc}}",
+    "movedRight": "economic axis shifted {{val}} pts right",
+    "movedLeft": "economic axis shifted {{val}} pts left",
+    "movedAuth": "social axis moved {{val}} pts toward authoritarian",
+    "movedLib": "social axis moved {{val}} pts toward libertarian",
+    "privacyNote": "This history is stored only on this device and never shared."
   },
   "mapPreview": {
     "title": "Political World View",
