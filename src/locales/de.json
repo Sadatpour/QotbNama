@@ -726,16 +726,24 @@
     "desc": "Die gesuchte Adresse existiert nicht.",
     "home": "Zur Startseite"
   },
-  "stats": {
-    "title": "Bewertungsbericht",
-    "subtitle": "Quiz-Abschlussstatistiken auf diesem Gerät",
-    "totalCompletions": "mal abgeschlossen",
-    "avgEconomic": "Ø Wirtschaftsachse",
-    "avgSocial": "Ø Soziale Achse",
-    "quadrantDist": "Quadrantenverteilung",
-    "yourResult": "In den meisten Bewertungen lagen Sie im Quadranten '{{quadrant}}'.",
-    "shareLink": "Ergebnis teilen",
-    "viewFull": "Vollständigen Bericht anzeigen"
+  "history": {
+    "title": "Deine früheren Ergebnisse",
+    "subtitle": "{{count}} frühere Versuch(e) auf diesem Gerät",
+    "compareTitle": "Vergleich mit dem letzten Versuch",
+    "previous": "Vorher",
+    "current": "Aktuell",
+    "economic": "Wirtschaft",
+    "social": "Sozial",
+    "eco": "Wirt.:",
+    "soc": "Soz.:",
+    "allPrevious": "Alle früheren Versuche",
+    "latestPrev": "Letzter",
+    "changeNote": "{{eco}} · {{soc}}",
+    "movedRight": "Wirtschaftsachse {{val}} Punkte nach rechts verschoben",
+    "movedLeft": "Wirtschaftsachse {{val}} Punkte nach links verschoben",
+    "movedAuth": "Soziale Achse {{val}} Punkte Richtung autoritär verschoben",
+    "movedLib": "Soziale Achse {{val}} Punkte Richtung libertär verschoben",
+    "privacyNote": "Diese Historie wird nur auf diesem Gerät gespeichert und nie weitergegeben."
   },
   "mapPreview": {
     "title": "Politische Weltsicht",
