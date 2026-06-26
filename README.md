@@ -1,228 +1,349 @@
-# قطب‌نما · Qotbnama
+<div align="center">
 
-> **اندیشه‌ات را بهتر بشناس** — _Know your ideas better._
+<img src="public/logo.svg" alt="Qotbnama Logo" width="120" />
 
-Qotbnama is a **static, single-page educational web app** that helps users discover their
-**approximate political orientation** through a short questionnaire, then teaches them about
-political systems and ideologies in a **completely neutral, educational** manner.
+# قطب‌نما · Qotbnama · Kompassnadel
 
-Everything runs in the browser. **No backend, no database, no API, no login, no analytics.**
-All data is processed and stored locally on the user's device.
+**اندیشه‌ات را بهتر بشناس &nbsp;·&nbsp; Know your ideas better &nbsp;·&nbsp; Lerne deine Ideen besser kennen**
 
-- 🌍 **Trilingual** — Persian (RTL), English, German (LTR), with automatic browser-language detection
-- 🧭 **Research-based questionnaire** — 35 items adapted from the Political Compass, Nolan Chart, WVS, ESS and Pew political-values batteries
-- 📊 **Visual results** — interactive political compass, radar chart, signed dimension bars, detailed neutral analysis
-- 🎓 **Engaging learning** — 20 interactive topic cards with definitions, history, advantages, criticisms, real examples and common misconceptions
-- 🖼️ **Export & share** — PDF report, downloadable share image, and social sharing (X, Facebook, LinkedIn, Telegram, WhatsApp, copy link)
-- 🌗 **Light & dark mode**, mobile-first, accessible (WCAG AA targets), smooth animations
+[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-Visit_App-6366f1?style=for-the-badge)](https://sadatpour.github.io/QotbNama)
+[![MIT License](https://img.shields.io/badge/License-MIT-22d3ee?style=for-the-badge)](LICENSE)
+[![React](https://img.shields.io/badge/React_18-TypeScript-61dafb?style=for-the-badge&logo=react)](https://react.dev)
+[![Vite](https://img.shields.io/badge/Vite_5-Build_Tool-646cff?style=for-the-badge&logo=vite)](https://vitejs.dev)
 
 ---
 
-## Tech stack
-
-| Concern        | Choice                                            |
-| -------------- | ------------------------------------------------- |
-| Framework      | React 18 + TypeScript                             |
-| Build tool     | Vite 5                                            |
-| Styling        | Tailwind CSS 3 (class-based dark mode)            |
-| Routing        | React Router 6 — **HashRouter** (no server rewrites needed) |
-| Animation      | Framer Motion                                     |
-| Charts         | Recharts (radar) + a custom SVG political compass |
-| i18n           | i18next + react-i18next + browser language detector |
-| PDF / image    | jsPDF + html2canvas                               |
+**[ [فارسی](#-فارسی) · [English](#-english) · [Deutsch](#-deutsch) ]**
 
 ---
 
-## Getting started
+</div>
 
-### Prerequisites
+## 🇮🇷 فارسی
+
+<div dir="rtl" align="right">
+
+### قطب‌نما چیست؟
+
+**قطب‌نما** یک ابزار آموزشی وب‌محور است که به شما کمک می‌کند جهت‌گیری سیاسی تقریبی خود را کشف کنید و درباره نظام‌ها و ایدئولوژی‌های سیاسی گوناگون به‌شکلی کاملاً بی‌طرف و آموزشی بیاموزید.
+
+همه چیز در مرورگر اجرا می‌شود. **هیچ بک‌اند، دیتابیس، API، لاگین یا آنالیتیکسی وجود ندارد.** تمام داده‌ها به‌صورت محلی روی دستگاه شما پردازش و ذخیره می‌شوند.
+
+---
+
+### ✨ ویژگی‌ها
+
+- 🧭 **پرسش‌نامه علمی** — ۳۵ سوال با مقیاس هفت‌درجه‌ای، برگرفته از Political Compass، Nolan Chart، WVS، ESS و Pew Research
+- 📊 **نتایج بصری** — قطب‌نمای سیاسی تعاملی، نمودار رادار، نوارهای ابعادی و تحلیل تفصیلی بی‌طرف
+- 🎓 **آموزش جذاب** — ۲۰ کارت موضوعی شامل تعریف، تاریخچه، مزایا، نقدها، مثال‌های واقعی و باورهای غلط رایج
+- 🌍 **نقشه تعاملی جهان** — مشاهده نظام سیاسی کشورها روی نقشه رنگی
+- 📈 **گزارش آمار شخصی** — تاریخچه آزمون‌های تکمیل‌شده، توزیع ربع‌ها و میانگین امتیازات
+- 🖼️ **صادرات و اشتراک** — PDF، تصویر دانلودی، و اشتراک‌گذاری در شبکه‌های اجتماعی
+- 🌗 **حالت روشن/تاریک**، موبایل‌فرست، دسترس‌پذیر و روان
+- 🔒 **حریم خصوصی کامل** — بدون ثبت‌نام، بدون ردیابی
+
+---
+
+### 🚀 شروع سریع
+
+```bash
+# نصب وابستگی‌ها
+npm install
+
+# اجرای محیط توسعه
+npm run dev
+
+# ساخت نسخه تولید
+npm run build
+```
+
+---
+
+### 📁 ساختار پروژه
+
+```
+src/
+├── components/
+│   ├── ui/          # دکمه، کارت، آیکون، لوگو، …
+│   ├── layout/      # نوار ناوبری، فوتر، تغییر تم
+│   ├── charts/      # قطب‌نما (SVG)، رادار، نوارها
+│   ├── quiz/        # مقیاس لیکرت، کارت سوال
+│   ├── results/     # خلاصه، اشتراک، گزارش
+│   ├── map/         # نقشه جهان، پنل کشور، MiniMap
+│   └── stats/       # بخش آمار ارزیابی‌ها
+├── context/         # ThemeContext، QuizContext
+├── data/            # سوالات، ابعاد، موضوعات آموزشی
+├── hooks/           # useDirection، useMediaQuery
+├── i18n/            # تنظیمات چندزبانه
+├── locales/         # fa.json، en.json، de.json
+├── pages/           # صفحات اصلی
+└── services/        # نمره‌دهی، ذخیره‌سازی، PDF، اشتراک
+```
+
+---
+
+### 🎯 روش‌شناسی نمره‌دهی
+
+آزمون **پنج بُعد** اساسی را می‌سنجد، هر بُعد با ۷ سوال (۳۵ سوال کل):
+
+| بُعد | قطب منفی (−) | قطب مثبت (+) |
+|------|-------------|-------------|
+| اقتصادی | چپ | راست |
+| اجتماعی | آزادی‌خواه | اقتدارگرا |
+| دموکراتیک | غیردموکراتیک | دموکراتیک |
+| نقش دولت | بازار آزاد | مداخله دولت |
+| دین و حکومت | سنتی/دینی | سکولار |
+
+</div>
+
+---
+
+## 🇬🇧 English
+
+### What is Qotbnama?
+
+**Qotbnama** (قطب‌نما, meaning *compass* in Persian) is a **static, privacy-first educational web app** that helps users discover their approximate political orientation through a short, research-based questionnaire — then teaches them about political systems and ideologies in a completely neutral, engaging way.
+
+Everything runs in the browser. **No backend, no database, no API, no login, no analytics.** All data is processed and stored locally on the user's device via `localStorage`.
+
+---
+
+### ✨ Features
+
+| Feature | Description |
+|---------|-------------|
+| 🧭 **Research-based Quiz** | 35 items on a 7-point Likert scale, adapted from Political Compass, Nolan Chart, WVS, ESS & Pew |
+| 📊 **Visual Results** | Interactive political compass, radar chart, dimension bars, detailed neutral analysis |
+| 🎓 **Educational Cards** | 20 topic cards — definition, history, pros, criticisms, real examples, common misconceptions |
+| 🌍 **World Map** | Interactive map coloring countries by political system; featured mini-map on the home page |
+| 📈 **Assessment Stats** | Local completion history, quadrant distribution, average scores across retakes |
+| 🖼️ **Export & Share** | PDF report, PNG share card, social links (X, Facebook, LinkedIn, Telegram, WhatsApp) |
+| 🌗 **Light / Dark mode** | System-aware, toggleable, persisted |
+| 🌐 **Trilingual** | Persian (RTL), English, German — auto-detected, switchable |
+| 🔒 **Full Privacy** | Zero tracking, zero sign-up, zero data sent anywhere |
+
+---
+
+### 🚀 Quick Start
+
+#### Prerequisites
 
 - Node.js **18+** (tested on Node 22)
 - npm 9+
 
-### Install
-
 ```bash
+# Install dependencies
 npm install
-```
 
-### Development
-
-```bash
+# Start dev server  (default → http://localhost:5173)
 npm run dev
-```
 
-Open the printed local URL (default `http://localhost:5173`). The dev server honors a `PORT`
-environment variable if one is set.
+# Production build  (output → dist/)
+npm run build
 
-### Build
+# Preview the build locally
+npm run preview
 
-```bash
-npm run build      # type-checks then builds to dist/
-npm run preview    # serve the production build locally
-```
+# Type-check only
+npm run typecheck
 
-### Other scripts
-
-```bash
-npm run typecheck  # tsc --noEmit
-npm run lint       # eslint
+# Lint
+npm run lint
 ```
 
 ---
 
-## Deployment
+### 🏗️ Tech Stack
 
-The app is a fully static bundle in `dist/` and uses **HashRouter**, so routes like
-`/#/results` never hit the server — it works on any static host **without** rewrite rules.
-`base` is set to `./` (relative paths), so it also works from a sub-path.
-
-| Host             | How                                                                 |
-| ---------------- | ------------------------------------------------------------------- |
-| **Vercel**       | Import the repo; framework preset _Vite_; build `npm run build`, output `dist`. |
-| **Netlify**      | Build command `npm run build`, publish directory `dist`.            |
-| **GitHub Pages** | `npm run build`, then publish the `dist/` folder (e.g. via `gh-pages`). Relative `base` + HashRouter means no extra config. |
-| **Shared hosting** | Upload the contents of `dist/` to your web root.                  |
+| Concern | Choice |
+|---------|--------|
+| Framework | React 18 + TypeScript |
+| Build | Vite 5 |
+| Styling | Tailwind CSS 3 (class-based dark mode) |
+| Routing | React Router 6 — **HashRouter** (no server rewrites) |
+| Animation | Framer Motion |
+| Charts | Recharts (radar) + custom SVG political compass |
+| Map | react-simple-maps + world-atlas TopoJSON |
+| i18n | i18next + react-i18next + browser language detector |
+| PDF / Image | jsPDF + html2canvas |
+| Storage | Browser `localStorage` (typed wrapper in `src/services/storage.ts`) |
 
 ---
 
-## Project structure
+### 📁 Project Structure
 
 ```
 src/
-├── assets/                # (static imports, if any)
 ├── components/
-│   ├── ui/                # Button, Card, Logo, Icon, Accordion, SectionHeading, PageLoader
-│   ├── layout/            # Navbar, Footer, Layout, ThemeToggle, LanguageSwitcher
-│   ├── charts/            # PoliticalCompass (SVG), DimensionRadar (Recharts), DimensionBar
-│   ├── quiz/              # LikertScale, QuestionCard
-│   ├── results/           # ResultSummary, SharePanel, ShareCard, ResultReport
-│   └── education/         # TopicCard
-├── context/               # ThemeContext, QuizContext
-├── data/                  # questions.ts, dimensions.ts, education.ts (the content model)
-├── hooks/                 # useDirection
-├── i18n/                  # i18next setup + language helpers
-├── locales/               # fa.json, en.json, de.json (all UI + content strings)
-├── pages/                 # Landing, Introduction, Questionnaire, Results, Education, EducationDetail, NotFound
-├── services/              # scoring.ts, storage.ts, pdf.ts, share.ts
-├── types/                 # shared TypeScript types
-├── App.tsx                # routes (HashRouter) + lazy loading
-├── main.tsx               # entry
-└── index.css              # Tailwind layers + theme variables
+│   ├── ui/          # Button, Card, Icon, Logo, Accordion, SectionHeading, PageLoader
+│   ├── layout/      # Navbar (with icons), Footer, Layout, ThemeToggle, LanguageSwitcher
+│   ├── charts/      # PoliticalCompass (SVG), DimensionRadar (Recharts), DimensionBar
+│   ├── quiz/        # LikertScale, QuestionCard
+│   ├── results/     # ResultSummary, SharePanel, ShareCard, ResultReport
+│   ├── map/         # WorldMap page components, CountryPanel, MapLegend, MiniMap (landing)
+│   ├── stats/       # StatsSection — local completion history & analytics
+│   └── education/   # TopicCard
+├── context/         # ThemeContext, QuizContext (with completion history tracking)
+├── data/            # questions.ts, dimensions.ts, education.ts, countries.ts
+├── hooks/           # useDirection, useMediaQuery, useCountryName
+├── i18n/            # i18next setup, language helpers, geo-detection
+├── locales/         # fa.json · en.json · de.json  (all UI + content strings)
+├── pages/           # Landing, Introduction, Questionnaire, Results, Education,
+│                    # EducationDetail, WorldMap, SharePage, NotFound
+└── services/        # scoring.ts, storage.ts (+ CompletionRecord), pdf.ts, share.ts
 ```
 
 ---
 
-## Scoring methodology
+### 🎯 Scoring Methodology
 
-The questionnaire measures **five conceptual dimensions**, each with **7 items** (35 total). More
-balanced items per dimension raise internal-consistency reliability and reduce measurement error,
-so each dimension's score is a more stable estimate:
+Five dimensions, 7 items each (35 total). Items are **balanced-keyed** — each dimension mixes positive- and reverse-keyed statements to reduce acquiescence bias (standard in WVS / ESS instruments).
 
-| Dimension     | Negative pole (−)        | Positive pole (+)      |
-| ------------- | ------------------------ | ---------------------- |
-| `economic`    | Left                     | Right                  |
-| `social`      | Libertarian              | Authoritarian          |
-| `democratic`  | Non-democratic           | Democratic             |
-| `state`       | Free market              | State intervention     |
-| `secular`     | Traditional / religious  | Secular                |
+| Dimension | Negative pole (−) | Positive pole (+) |
+|-----------|-------------------|-------------------|
+| `economic` | Left | Right |
+| `social` | Libertarian | Authoritarian |
+| `democratic` | Non-democratic | Democratic |
+| `state` | Free market | State intervention |
+| `secular` | Traditional / religious | Secular |
 
-Each item carries metadata: `dimension`, `weight`, `polarity`, `source` (methodology) and
-`reasoning` (see `src/data/questions.ts`). Items are **balanced-keyed** — every dimension mixes
-positive- and reverse-keyed statements to reduce **acquiescence bias** (the tendency to agree
-regardless of content), a standard practice in WVS/ESS instruments.
+**Computation pipeline** (`src/services/scoring.ts`):
 
-**Computation** (`src/services/scoring.ts`):
-
-1. Each 7-point Likert answer (index `0..6`) is centered: `centered = index − 3` → range `[-3, 3]`.
-2. `contribution = centered × polarity × weight`.
-3. Per dimension, sum contributions and divide by the maximum possible absolute sum
-   (`3 × Σweight`) → normalise to `[-1, 1]`, then scale to **`[-100, 100]`**.
-4. **Unanswered items are skipped** and excluded from the denominator, so partial completion
-   still produces a fair estimate.
-5. The **political-compass** coordinates reuse two dimensions: `x = economic`, `y = social`.
-6. **Top contributors** = items whose `|centered × polarity × weight|` is largest.
-7. **Recommended topics** = education topics whose compass position is nearest (Euclidean
-   distance) to the user's position.
-
-The result is explicitly framed as an **educational estimate, not a scientific diagnosis**, and
-the language never judges the user.
+1. Center the 7-point answer: `centered = index − 3` → range `[−3, 3]`
+2. `contribution = centered × polarity × weight`
+3. Normalize per dimension to `[−100, 100]` (divide by max possible absolute sum)
+4. Unanswered items are skipped and excluded from the denominator
+5. Political compass coordinates: `x = economic`, `y = social`
+6. Top contributors = items with highest `|contribution|`
+7. Recommended topics = education topics nearest the user's compass position (Euclidean distance)
 
 ---
 
-## Localization
+### 🚀 Deployment
 
-- Languages: **Persian (`fa`, RTL)**, **English (`en`)**, **German (`de`)**.
-- Detection order: saved preference → browser language → fallback (`fa`/`en`).
-- The choice is persisted in `localStorage` (`qotbnama.language`).
-- `<html lang dir>` is updated on every change (`src/i18n/index.ts → applyLanguage`).
-- **All** user-facing strings — UI, questions, dimensions and the full education content — live
-  in `src/locales/{fa,en,de}.json`. No hard-coded copy in components.
+The app is a fully static bundle in `dist/` using **HashRouter** — routes like `/#/results` never hit the server.
 
-### Adding a language
-
-1. Add `src/locales/<code>.json` (copy an existing file and translate).
-2. Register it in `src/i18n/index.ts` (`resources`, `SUPPORTED_LANGUAGES`, `DIRECTION`).
-3. Set the correct `dir` (`rtl`/`ltr`).
+| Host | How |
+|------|-----|
+| **GitHub Pages** | `npm run build` → publish `dist/` (e.g. via `gh-pages`). No extra config needed. |
+| **Vercel** | Import repo; preset *Vite*; build `npm run build`; output `dist`. |
+| **Netlify** | Build `npm run build`; publish directory `dist`. |
+| **Shared hosting** | Upload contents of `dist/` to your web root. |
 
 ---
 
-## PDF generation
+### 🔐 Privacy
 
-`src/services/pdf.ts` renders the off-screen **`ResultReport`** component (a self-contained,
-light-themed report) to a canvas with **html2canvas**, then paginates that image into an A4
-**jsPDF** document.
-
-Why image-based? jsPDF's built-in fonts cannot shape Persian/Arabic (RTL, joined glyphs) or
-guarantee German umlauts. Capturing the already-correctly-rendered DOM makes the export
-**pixel-faithful and correct for all three languages** without manual font embedding/shaping.
-The report includes the logo, date, language, the user's position, compass, dimension bars,
-top contributors, recommended topics and the disclaimer.
-
-The **share image** (`ShareCard`) is produced the same way and downloaded as a PNG.
+- No personal information requested — no account, no login
+- No analytics or third-party tracking
+- Answers, theme, language, and completion history stored only in `localStorage` (keys prefixed `qotbnama.`)
+- Clearing data: click **Retake** on the results page, or clear `localStorage` in DevTools
 
 ---
 
-## Privacy
+### 🎨 Customization
 
-- No personal information is requested; no account, no login.
-- No analytics or third-party tracking by default.
-- Answers, theme and language are stored only in the browser's `localStorage`
-  (keys prefixed `qotbnama.`) and can be cleared via **Retake** on the results page.
-
----
-
-## Customization guide
-
-| Want to…                         | Edit                                                              |
-| -------------------------------- | ----------------------------------------------------------------- |
-| Change/add **questions**         | `src/data/questions.ts` + add text under `questions.*` in each locale |
-| Tune **weights / polarity**      | `src/data/questions.ts`                                           |
-| Adjust **dimensions / colors**   | `src/data/dimensions.ts`                                          |
-| Add/edit **education topics**    | `src/data/education.ts` + content under `education.topics.*` in each locale |
-| Change the **palette / gradients** | `tailwind.config.js` (`brand`, `axis`, `brand-gradient`) and `src/index.css` variables |
-| Replace the **logo**             | `public/logo.svg` (and `public/og-image.svg` for social previews) |
-| Change **scoring rules**         | `src/services/scoring.ts` (documented inline)                    |
+| Goal | File(s) |
+|------|---------|
+| Add / change questions | `src/data/questions.ts` + `questions.*` key in each locale |
+| Tune weights / polarity | `src/data/questions.ts` |
+| Adjust dimensions | `src/data/dimensions.ts` |
+| Add education topics | `src/data/education.ts` + `education.topics.*` in each locale |
+| Change colors / gradients | `tailwind.config.js` + `src/index.css` CSS variables |
+| Replace logo | `public/logo.svg` (+ `public/og-image.svg` for social previews) |
+| Add a language | Add `src/locales/<code>.json` → register in `src/i18n/index.ts` |
 
 ---
 
-## Accessibility
+### ♿ Accessibility
 
-- Semantic landmarks, a **skip link**, and `aria-*` on interactive widgets (radiogroup Likert
-  scale, listbox language switcher, expandable accordions).
-- Full **keyboard support** in the questionnaire: keys `1–7` select an answer, arrow keys
-  navigate between questions (direction-aware in RTL).
-- Visible focus rings, AA-oriented contrast in both themes, and `prefers-reduced-motion`
-  support that disables animations.
+- Semantic landmarks, skip link, and `aria-*` on interactive widgets
+- Full **keyboard support** in the quiz: `1–7` select, arrow keys navigate (RTL-aware)
+- Visible focus rings, AA-oriented contrast in both themes
+- `prefers-reduced-motion` support — disables animations when the OS requests it
 
 ---
 
-## Disclaimer
+## 🇩🇪 Deutsch
 
-Qotbnama is an **educational** tool. Its result is an approximate snapshot of tendencies at the
-moment of answering — **not** a scientific or psychological diagnosis. All educational content is
-written to remain **politically neutral**.
+### Was ist Qotbnama?
 
-## License
+**Qotbnama** (قطب‌نما, auf Persisch *Kompass*) ist eine **statische, datenschutzfreundliche Bildungs-Web-App**, die Nutzerinnen und Nutzern dabei hilft, ihre ungefähre politische Ausrichtung mithilfe eines kurzen, forschungsbasierten Fragebogens zu entdecken — und anschließend auf völlig neutrale, ansprechende Weise politische Systeme und Ideologien kennenzulernen.
 
-Provided for educational use. Replace this section with your preferred license before publishing.
+Alles läuft im Browser. **Kein Backend, keine Datenbank, kein API, kein Login, keine Analyse.** Alle Daten werden lokal auf dem Gerät des Nutzers verarbeitet und gespeichert.
+
+---
+
+### ✨ Funktionen
+
+- 🧭 **Forschungsbasierter Fragebogen** — 35 Aussagen auf einer 7-Punkte-Likert-Skala, adaptiert aus Political Compass, Nolan Chart, WVS, ESS und Pew Research
+- 📊 **Visuelle Ergebnisse** — Interaktiver politischer Kompass, Radardiagramm, Dimensionsbalken und detaillierte neutrale Analyse
+- 🎓 **Interaktive Lernkarten** — 20 Themenkarten mit Definition, Geschichte, Vor- und Nachteilen, realen Beispielen und häufigen Missverständnissen
+- 🌍 **Interaktive Weltkarte** — Länder nach politischem System eingefärbt; Mini-Karte auf der Startseite
+- 📈 **Bewertungsstatistiken** — Lokale Abschlusshistorie, Quadrantenverteilung, Durchschnittswerte
+- 🖼️ **Export & Teilen** — PDF-Bericht, PNG-Bild, Social-Media-Links
+- 🌗 **Hell-/Dunkel-Modus**, mobiloptimiert, barrierefrei
+- 🔒 **Vollständiger Datenschutz** — Kein Tracking, keine Registrierung
+
+---
+
+### 🚀 Schnellstart
+
+```bash
+# Abhängigkeiten installieren
+npm install
+
+# Entwicklungsserver starten  (Standard → http://localhost:5173)
+npm run dev
+
+# Produktions-Build erstellen  (Ausgabe → dist/)
+npm run build
+```
+
+---
+
+### 🏗️ Technologie-Stack
+
+| Bereich | Wahl |
+|---------|------|
+| Framework | React 18 + TypeScript |
+| Build-Tool | Vite 5 |
+| Styling | Tailwind CSS 3 |
+| Routing | React Router 6 (HashRouter) |
+| Animation | Framer Motion |
+| Diagramme | Recharts + SVG-Kompass |
+| Karte | react-simple-maps + world-atlas |
+| i18n | i18next + react-i18next |
+| PDF / Bild | jsPDF + html2canvas |
+
+---
+
+### 🌐 Lokalisierung
+
+- **Persisch (`fa`, RTL)** · **Englisch (`en`)** · **Deutsch (`de`)**
+- Erkennung: gespeicherte Präferenz → Browser-Sprache → IP-Geo → Fallback
+- Alle nutzersichtigen Texte — UI, Fragen, Dimensionen, Bildungsinhalte — befinden sich in `src/locales/{fa,en,de}.json`
+
+#### Sprache hinzufügen
+
+1. `src/locales/<code>.json` erstellen (bestehende Datei kopieren und übersetzen)
+2. In `src/i18n/index.ts` registrieren (`resources`, `SUPPORTED_LANGUAGES`, `DIRECTION`)
+3. Korrekte Schreibrichtung (`dir`) setzen: `rtl` oder `ltr`
+
+---
+
+### 📄 Lizenz
+
+Dieses Projekt steht unter der [MIT-Lizenz](LICENSE) und darf frei verwendet, verändert und verbreitet werden.
+
+---
+
+<div align="center">
+
+**قطب‌نما** ist mit ❤️ für Bildung gebaut — neutral, offen, privat.
+
+_Qotbnama is built with ❤️ for education — neutral, open, private._
+
+ساخته‌شده با ❤️ برای آموزش — بی‌طرف، آزاد، خصوصی.
+
+</div>
