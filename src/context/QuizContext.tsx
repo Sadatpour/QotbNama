@@ -4,6 +4,7 @@ import type { Answers, AssessmentResult, LikertValue } from '@/types'
 import { QUESTIONS } from '@/data/questions'
 import { computeResult } from '@/services/scoring'
 import { storage } from '@/services/storage'
+import { quadrantKey } from '@/services/scoring'
 
 interface QuizContextValue {
   answers: Answers
@@ -43,7 +44,14 @@ export function QuizProvider({ children }: { children: ReactNode }) {
     const iso = new Date().toISOString()
     setCompletedAt(iso)
     storage.setCompletedAt(iso)
-    return computeResult(answers, iso)
+    const res = computeResult(answers, iso)
+    storage.addCompletionRecord({
+      completedAt: iso,
+      quadrant: quadrantKey(res.compass.economic, res.compass.social),
+      economic: res.compass.economic,
+      social: res.compass.social,
+    })
+    return res
   }, [answers])
 
   const answeredCount = useMemo(

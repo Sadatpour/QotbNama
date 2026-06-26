@@ -1,3 +1,4 @@
+import { lazy, Suspense } from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
@@ -5,6 +6,8 @@ import { Icon } from '@/components/ui/Icon'
 import type { IconName } from '@/components/ui/Icon'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { useQuiz } from '@/context/QuizContext'
+
+const MiniMap = lazy(() => import('@/components/map/MiniMap').then((m) => ({ default: m.MiniMap })))
 
 const FEATURES: Array<{ key: string; icon: IconName }> = [
   { key: 'neutral', icon: 'scale' },
@@ -45,7 +48,7 @@ export function Landing() {
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-3 lg:justify-start">
-            <Link to="/intro" className="btn-primary text-lg">
+            <Link to="/quiz" className="btn-primary text-lg">
               <Icon name="compass" size={20} />
               {t('landing.ctaPrimary')}
             </Link>
@@ -137,6 +140,38 @@ export function Landing() {
         </div>
       </section>
 
+      {/* World Map Preview */}
+      <section className="py-12">
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="overflow-hidden rounded-3xl border border-base surface-3"
+        >
+          <div className="flex flex-col items-start justify-between gap-4 p-6 sm:flex-row sm:items-center sm:p-8">
+            <div>
+              <span className="chip surface-3 mb-3 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-indigo">
+                <Icon name="globe" size={14} />
+                {t('mapPreview.eyebrow')}
+              </span>
+              <h2 className="text-2xl font-extrabold sm:text-3xl">{t('mapPreview.title')}</h2>
+              <p className="mt-2 max-w-md text-muted">{t('mapPreview.subtitle')}</p>
+            </div>
+            <Link to="/map" className="btn-primary shrink-0">
+              <Icon name="globe" size={18} />
+              {t('mapPreview.cta')}
+            </Link>
+          </div>
+          <div className="relative h-56 overflow-hidden sm:h-72">
+            <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-t from-[color:rgb(var(--surface-2))] via-transparent to-transparent" />
+            <Suspense fallback={<div className="h-full w-full animate-pulse surface-3" />}>
+              <MiniMap />
+            </Suspense>
+          </div>
+        </motion.div>
+      </section>
+
       {/* CTA banner */}
       <section className="py-12">
         <div className="relative overflow-hidden rounded-3xl bg-brand-gradient p-10 text-center text-white shadow-glow">
@@ -144,7 +179,7 @@ export function Landing() {
           <h2 className="text-3xl font-extrabold sm:text-4xl">{t('landing.title')}</h2>
           <p className="mx-auto mt-3 max-w-xl text-white/90">{t('landing.subtitle')}</p>
           <Link
-            to="/intro"
+            to="/quiz"
             className="btn mt-6 bg-white text-brand-indigo hover:-translate-y-0.5"
           >
             <Icon name="compass" size={20} />

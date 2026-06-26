@@ -8,6 +8,14 @@ import { useQuiz } from '@/context/QuizContext'
 import { useDirection } from '@/hooks/useDirection'
 import { QuestionCard } from '@/components/quiz/QuestionCard'
 import { Icon } from '@/components/ui/Icon'
+import type { IconName } from '@/components/ui/Icon'
+
+const INTRO_POINTS: Array<{ key: string; icon: IconName; color: string }> = [
+  { key: 'purpose', icon: 'target', color: 'from-brand-blue to-brand-cyan' },
+  { key: 'duration', icon: 'clock', color: 'from-brand-purple to-brand-indigo' },
+  { key: 'privacy', icon: 'lock', color: 'from-brand-cyan to-brand-blue' },
+  { key: 'nature', icon: 'graduation', color: 'from-brand-orange to-brand-purple' },
+]
 
 export function Questionnaire() {
   const { t } = useTranslation()
@@ -15,17 +23,18 @@ export function Questionnaire() {
   const { isRtl } = useDirection()
   const { answers, setAnswer, answeredCount, totalQuestions, finalize } = useQuiz()
 
-  const [index, setIndex] = useState(0)
+  const [index, setIndex] = useState(() => Math.min(0, QUESTIONS_ORDERED.length - 1))
   const [direction, setDirection] = useState(1)
-  const question = QUESTIONS_ORDERED[index]
-  const value = answers[question.id]
+  const safeIndex = Math.min(Math.max(index, 0), QUESTIONS_ORDERED.length - 1)
+  const question = QUESTIONS_ORDERED[safeIndex]
+  const value = question ? answers[question.id] : undefined
   const isLast = index === totalQuestions - 1
   const progress = Math.round((answeredCount / totalQuestions) * 100)
 
   const goNext = useCallback(() => {
     setDirection(1)
-    setIndex((i) => Math.min(i + 1, totalQuestions - 1))
-  }, [totalQuestions])
+    setIndex((i) => Math.min(i + 1, QUESTIONS_ORDERED.length - 1))
+  }, [])
 
   const goPrev = useCallback(() => {
     setDirection(-1)
@@ -34,18 +43,26 @@ export function Questionnaire() {
 
   const handleSelect = useCallback(
     (v: LikertValue) => {
+      if (!question) return
       setAnswer(question.id, v)
       if (!isLast) {
         window.setTimeout(() => goNext(), 280)
       }
     },
-    [question.id, isLast, setAnswer, goNext],
+    [question, isLast, setAnswer, goNext],
   )
 
   const handleFinish = useCallback(() => {
     finalize()
     navigate('/results')
   }, [finalize, navigate])
+
+  // Guard: ensure index stays in range if questions array length changes.
+  useEffect(() => {
+    if (index >= QUESTIONS_ORDERED.length) {
+      setIndex(QUESTIONS_ORDERED.length - 1)
+    }
+  }, [index])
 
   // Keyboard: 1–7 select, arrows navigate.
   useEffect(() => {
@@ -61,6 +78,8 @@ export function Questionnaire() {
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
   }, [handleSelect, goNext, goPrev, isRtl])
+
+  if (!question) return null
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-8 sm:py-12">
@@ -164,6 +183,37 @@ export function Questionnaire() {
           </button>
         </div>
       )}
+
+      {/* Intro info — shown below the quiz for those who want to read it */}
+      <div className="mt-16 border-t border-base pt-12">
+        <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-muted">
+          {t('nav.intro')}
+        </p>
+        <h2 className="mb-2 text-xl font-bold">{t('intro.title')}</h2>
+        <p className="mb-8 text-muted">{t('intro.lead')}</p>
+        <div className="grid gap-4 sm:grid-cols-2">
+          {INTRO_POINTS.map((p) => (
+            <div key={p.key} className="card flex flex-col gap-3 p-5">
+              <span
+                className={`grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br text-white ${p.color}`}
+              >
+                <Icon name={p.icon} size={18} />
+              </span>
+              <h3 className="font-bold">{t(`intro.${p.key}.title`)}</h3>
+              <p className="text-sm text-muted">{t(`intro.${p.key}.desc`)}</p>
+            </div>
+          ))}
+        </div>
+        <div className="mt-6 flex items-start gap-3 rounded-2xl border border-brand-orange/30 bg-brand-orange/5 p-5">
+          <span className="mt-0.5 shrink-0 text-brand-orange">
+            <Icon name="alert-triangle" size={20} />
+          </span>
+          <div>
+            <h3 className="font-bold text-brand-orange">{t('intro.disclaimerTitle')}</h3>
+            <p className="mt-1 text-sm text-muted">{t('intro.disclaimer')}</p>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

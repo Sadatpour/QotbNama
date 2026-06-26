@@ -725,5 +725,22 @@
     "title": "Page not found",
     "desc": "The address you were looking for does not exist.",
     "home": "Back to home"
+  },
+  "stats": {
+    "title": "Assessment Report",
+    "subtitle": "Quiz completion stats on this device",
+    "totalCompletions": "times completed",
+    "avgEconomic": "Avg. economic axis",
+    "avgSocial": "Avg. social axis",
+    "quadrantDist": "Quadrant distribution",
+    "yourResult": "In most assessments you landed in the \"{{quadrant}}\" quadrant.",
+    "shareLink": "Share your result",
+    "viewFull": "View full report"
+  },
+  "mapPreview": {
+    "title": "Political World View",
+    "subtitle": "See which political systems countries around the world use and find your place on the global map.",
+    "cta": "Explore World Map",
+    "eyebrow": "Interactive Map"
   }
 }
