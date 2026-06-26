@@ -139,7 +139,7 @@ export function Results() {
                     <span className="block leading-snug">{t(QUESTION_BY_ID[c.questionId].i18nKey)}</span>
                     <span className="mt-1.5 flex items-center gap-1.5">
                       <span className="text-xs text-muted">{t('results.yourAnswer')}:</span>
-                      <span className={`chip text-xs font-semibold ${c.contribution > 0 ? 'bg-brand-cyan/15 text-brand-cyan' : 'bg-red-100 text-red-600 dark:bg-red-950 dark:text-red-400'}`}>
+                      <span className={`chip text-xs font-semibold ${c.answer >= 4 ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300' : 'bg-red-100 text-red-600 dark:bg-red-950 dark:text-red-400'}`}>
                         {t(`likert.${c.answer}`)}
                       </span>
                     </span>
