@@ -12,7 +12,15 @@ const KEYS = {
   language: 'qotbnama.language',
   langSource: 'qotbnama.langSource',
   completedAt: 'qotbnama.completedAt',
+  completionHistory: 'qotbnama.completionHistory',
 } as const
+
+export interface CompletionRecord {
+  completedAt: string
+  quadrant: string
+  economic: number
+  social: number
+}
 
 /** How the current language was decided. */
 export type LangSource = 'user' | 'geo' | 'browser'
@@ -61,5 +69,14 @@ export const storage = {
   clearAssessment: () => {
     remove(KEYS.answers)
     remove(KEYS.completedAt)
+  },
+
+  getCompletionHistory: (): CompletionRecord[] =>
+    read<CompletionRecord[]>(KEYS.completionHistory) ?? [],
+
+  addCompletionRecord: (record: CompletionRecord) => {
+    const history = read<CompletionRecord[]>(KEYS.completionHistory) ?? []
+    history.push(record)
+    write(KEYS.completionHistory, history)
   },
 }

@@ -19,6 +19,7 @@ import { ResultReport } from '@/components/results/ResultReport'
 import { TopicCard } from '@/components/education/TopicCard'
 import { downloadElementAsImage } from '@/services/share'
 import { generatePdfFromElement } from '@/services/pdf'
+import { StatsSection } from '@/components/stats/StatsSection'
 
 export function Results() {
   const { t } = useTranslation()
@@ -177,6 +178,9 @@ export function Results() {
             ))}
           </div>
         </Card>
+
+        {/* Assessment statistics */}
+        <StatsSection currentResult={result} />
 
         {/* Share */}
         <Card animate>

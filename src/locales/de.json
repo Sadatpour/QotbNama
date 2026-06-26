@@ -725,5 +725,22 @@
     "title": "Seite nicht gefunden",
     "desc": "Die gesuchte Adresse existiert nicht.",
     "home": "Zur Startseite"
+  },
+  "stats": {
+    "title": "Bewertungsbericht",
+    "subtitle": "Quiz-Abschlussstatistiken auf diesem Gerät",
+    "totalCompletions": "mal abgeschlossen",
+    "avgEconomic": "Ø Wirtschaftsachse",
+    "avgSocial": "Ø Soziale Achse",
+    "quadrantDist": "Quadrantenverteilung",
+    "yourResult": "In den meisten Bewertungen lagen Sie im Quadranten '{{quadrant}}'.",
+    "shareLink": "Ergebnis teilen",
+    "viewFull": "Vollständigen Bericht anzeigen"
+  },
+  "mapPreview": {
+    "title": "Politische Weltsicht",
+    "subtitle": "Sehen Sie, welche politischen Systeme Länder weltweit haben und finden Sie Ihren Platz auf der globalen Karte.",
+    "cta": "Weltkarte erkunden",
+    "eyebrow": "Interaktive Karte"
   }
 }

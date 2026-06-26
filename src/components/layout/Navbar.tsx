@@ -8,18 +8,20 @@ import { ThemeToggle } from './ThemeToggle'
 import { LanguageSwitcher } from './LanguageSwitcher'
 
 const LINKS = [
-  { to: '/', key: 'nav.home', end: true },
-  { to: '/intro', key: 'nav.intro', end: false },
-  { to: '/quiz', key: 'nav.test', end: false },
-  { to: '/education', key: 'nav.education', end: false },
-  { to: '/map', key: 'nav.map', end: false },
-  { to: '/share', key: 'nav.share', end: false },
+  { to: '/', key: 'nav.home', end: true, icon: 'home' as const },
+  { to: '/intro', key: 'nav.intro', end: false, icon: 'info' as const },
+  { to: '/quiz', key: 'nav.test', end: false, icon: 'vote' as const },
+  { to: '/education', key: 'nav.education', end: false, icon: 'graduation' as const },
+  { to: '/map', key: 'nav.map', end: false, icon: 'globe' as const },
+  { to: '/share', key: 'nav.share', end: false, icon: 'share' as const },
 ]
 
 export function Navbar() {
   const { t } = useTranslation()
   const [open, setOpen] = useState(false)
   const location = useLocation()
+
+  const closeMenu = () => setOpen(false)
 
   return (
     <header className="sticky top-0 z-40 glass border-b border-base">
@@ -35,13 +37,14 @@ export function Navbar() {
                 to={link.to}
                 end={link.end}
                 className={({ isActive }) =>
-                  `rounded-xl px-4 py-2 text-sm font-semibold transition-colors ${
+                  `flex items-center gap-1.5 rounded-xl px-3 py-2 text-sm font-semibold transition-colors ${
                     isActive
                       ? 'surface-3 text-brand-indigo'
                       : 'text-muted hover:text-[color:rgb(var(--text))]'
                   }`
                 }
               >
+                <Icon name={link.icon} size={15} />
                 {t(link.key)}
               </NavLink>
             </li>
@@ -78,15 +81,16 @@ export function Navbar() {
                   <NavLink
                     to={link.to}
                     end={link.end}
-                    onClick={() => setOpen(false)}
+                    onClick={closeMenu}
                     className={({ isActive }) =>
-                      `block rounded-xl px-4 py-3 font-semibold transition-colors ${
+                      `flex items-center gap-3 rounded-xl px-4 py-3 font-semibold transition-colors ${
                         isActive || location.pathname === link.to
                           ? 'surface-3 text-brand-indigo'
                           : 'text-muted'
                       }`
                     }
                   >
+                    <Icon name={link.icon} size={18} />
                     {t(link.key)}
                   </NavLink>
                 </li>
