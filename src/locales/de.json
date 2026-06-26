@@ -744,7 +744,9 @@
     "movedLeft": "Wirtschaftsachse {{val}} Punkte nach links verschoben",
     "movedAuth": "Soziale Achse {{val}} Punkte Richtung autoritär verschoben",
     "movedLib": "Soziale Achse {{val}} Punkte Richtung libertär verschoben",
-    "privacyNote": "Diese Historie wird nur auf diesem Gerät gespeichert und nie weitergegeben."
+    "privacyNote": "Diese Historie wird nur auf diesem Gerät gespeichert und nie weitergegeben.",
+    "noHistory": "Du hast dieses Quiz auf diesem Gerät noch nicht gemacht.",
+    "noHistoryNote": "Da die Daten lokal gespeichert sind, wird dein Verlauf hier nur angezeigt, wenn du das Quiz zuvor auf genau diesem Gerät abgeschlossen hast."
   },
   "mapPreview": {
     "title": "Politische Weltsicht",

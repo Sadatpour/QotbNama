@@ -744,7 +744,9 @@
     "movedLeft": "economic axis shifted {{val}} pts left",
     "movedAuth": "social axis moved {{val}} pts toward authoritarian",
     "movedLib": "social axis moved {{val}} pts toward libertarian",
-    "privacyNote": "This history is stored only on this device and never shared."
+    "privacyNote": "This history is stored only on this device and never shared.",
+    "noHistory": "You haven't taken this quiz on this device before.",
+    "noHistoryNote": "Since data is stored locally, your history only appears here if you've completed the quiz on this same device before."
   },
   "mapPreview": {
     "title": "Political World View",

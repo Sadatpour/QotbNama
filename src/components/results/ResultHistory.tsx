@@ -54,20 +54,17 @@ export function ResultHistory({ currentResult }: ResultHistoryProps) {
     return [...history.slice(0, -1)].reverse()
   }, [history])
 
-  if (previous.length === 0) return null
-
   const currentQuadrant = quadrantKey(currentResult.compass.economic, currentResult.compass.social)
-  const latest = previous[0]
-  const ecoDelta = currentResult.compass.economic - latest.economic
-  const socDelta  = currentResult.compass.social  - latest.social
+  const latest = previous[0] ?? null
+  const ecoDelta = latest ? currentResult.compass.economic - latest.economic : 0
+  const socDelta  = latest ? currentResult.compass.social  - latest.social   : 0
+  const noticeable = Math.abs(ecoDelta) >= 5 || Math.abs(socDelta) >= 5
 
   const fmtDate = (iso: string) => {
     try {
       return new Intl.DateTimeFormat(i18n.language, { year: 'numeric', month: 'short', day: 'numeric' }).format(new Date(iso))
     } catch { return iso.slice(0, 10) }
   }
-
-  const noticeable = Math.abs(ecoDelta) >= 5 || Math.abs(socDelta) >= 5
 
   return (
     <motion.div
@@ -83,12 +80,25 @@ export function ResultHistory({ currentResult }: ResultHistoryProps) {
         </span>
         <div>
           <h2 className="text-lg font-bold">{t('history.title')}</h2>
-          <p className="text-sm text-muted">{t('history.subtitle', { count: previous.length })}</p>
+          {previous.length > 0 && (
+            <p className="text-sm text-muted">{t('history.subtitle', { count: previous.length })}</p>
+          )}
         </div>
       </div>
 
+      {/* Empty state */}
+      {previous.length === 0 && (
+        <div className="flex flex-col items-center gap-3 rounded-2xl border border-dashed border-base px-6 py-8 text-center">
+          <span className="grid h-12 w-12 place-items-center rounded-2xl surface-3 text-muted">
+            <Icon name="clock" size={22} />
+          </span>
+          <p className="font-semibold">{t('history.noHistory')}</p>
+          <p className="max-w-sm text-sm text-muted">{t('history.noHistoryNote')}</p>
+        </div>
+      )}
+
       {/* Side-by-side comparison with most recent previous result */}
-      <div className="mb-6 rounded-2xl border border-base p-4 sm:p-5">
+      {previous.length > 0 && <div className="mb-6 rounded-2xl border border-base p-4 sm:p-5">
         <p className="mb-4 text-[11px] font-semibold uppercase tracking-widest text-muted">
           {t('history.compareTitle')}
         </p>
@@ -177,7 +187,7 @@ export function ResultHistory({ currentResult }: ResultHistoryProps) {
             </p>
           </div>
         )}
-      </div>
+      </div>}
 
       {/* Compact list of all previous attempts */}
       {previous.length > 1 && (
