@@ -100,14 +100,16 @@ export function Results() {
             />
           </Card>
           <Card animate delay={0.05}>
-            <h2 className="mb-4 text-lg font-bold">{t('results.radarTitle')}</h2>
+            <h2 className="mb-1 text-lg font-bold">{t('results.radarTitle')}</h2>
+            <p className="mb-4 text-xs text-muted">{t('results.radarHint')}</p>
             <DimensionRadar result={result} />
           </Card>
         </div>
 
         {/* Dimension bars */}
         <Card animate>
-          <h2 className="mb-6 text-lg font-bold">{t('results.barsTitle')}</h2>
+          <h2 className="mb-1 text-lg font-bold">{t('results.barsTitle')}</h2>
+          <p className="mb-6 text-xs text-muted">{t('results.barsHint')}</p>
           <div className="grid gap-6 sm:grid-cols-2">
             {DIMENSIONS.map((d, i) => (
               <DimensionBar key={d.id} score={result.scores[d.id]} delay={i * 0.05} />
