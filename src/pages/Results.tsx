@@ -131,11 +131,16 @@ export function Results() {
                 {t('results.contributorsTitle')}
               </h3>
               <p className="mt-1 text-sm text-muted">{t('results.contributorsDesc')}</p>
-              <ul className="mt-2 flex flex-col gap-2">
+              <ul className="mt-2 flex flex-col gap-3">
                 {result.topContributors.map((c) => (
-                  <li key={c.questionId} className="flex items-start gap-2 text-sm">
-                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-purple" />
-                    <span>{t(QUESTION_BY_ID[c.questionId].i18nKey)}</span>
+                  <li key={c.questionId} className="rounded-xl border border-base p-3 text-sm">
+                    <span className="block leading-snug">{t(QUESTION_BY_ID[c.questionId].i18nKey)}</span>
+                    <span className="mt-1.5 flex items-center gap-1.5">
+                      <span className="text-xs text-muted">{t('results.yourAnswer')}:</span>
+                      <span className={`chip text-xs font-semibold ${c.contribution > 0 ? 'bg-brand-cyan/15 text-brand-cyan' : 'bg-brand-orange/15 text-brand-orange'}`}>
+                        {t(`likert.${c.answer}`)}
+                      </span>
+                    </span>
                   </li>
                 ))}
               </ul>

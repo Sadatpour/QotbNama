@@ -65,7 +65,15 @@ export interface AssessmentResult {
     social: number // y axis: libertarian(−) ↔ authoritarian(+)
   }
   /** The questions that contributed most to the final position. */
-  topContributors: Array<{ questionId: string; dimension: DimensionId; impact: number }>
+  topContributors: Array<{
+    questionId: string
+    dimension: DimensionId
+    impact: number
+    /** The user's actual Likert answer (0–6). */
+    answer: LikertValue
+    /** Signed contribution: positive = pushed toward positive pole, negative = toward negative pole. */
+    contribution: number
+  }>
   /** Ids of the educational topics most relevant to this result. */
   recommendedTopics: string[]
   /** ISO timestamp of when the assessment was completed. */

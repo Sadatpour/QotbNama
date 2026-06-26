@@ -84,16 +84,15 @@ function scoreDimension(dimension: DimensionId, answers: Answers): DimensionScor
  * from neutral the answer was, weighted by item importance.
  */
 function topContributors(answers: Answers): AssessmentResult['topContributors'] {
-  return QUESTIONS.map((q) => {
+  return QUESTIONS.flatMap((q) => {
     const raw = answers[q.id]
-    const centered = raw === undefined ? 0 : centerLikert(raw)
-    return {
-      questionId: q.id,
-      dimension: q.dimension,
-      impact: Math.abs(centered * q.polarity * q.weight),
-    }
+    if (raw === undefined) return []
+    const centered = centerLikert(raw)
+    const contribution = centered * q.polarity * q.weight
+    const impact = Math.abs(contribution)
+    if (impact === 0) return []
+    return [{ questionId: q.id, dimension: q.dimension, impact, answer: raw, contribution }]
   })
-    .filter((c) => c.impact > 0)
     .sort((a, b) => b.impact - a.impact)
     .slice(0, 5)
 }
