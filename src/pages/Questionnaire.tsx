@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { AnimatePresence, motion } from 'framer-motion'
@@ -21,10 +21,11 @@ export function Questionnaire() {
   const { t } = useTranslation()
   const navigate = useNavigate()
   const { isRtl } = useDirection()
-  const { answers, setAnswer, answeredCount, totalQuestions, finalize } = useQuiz()
+  const { answers, setAnswer, answeredCount, totalQuestions, finalize, isFinalized, resetQuiz } = useQuiz()
 
   const [index, setIndex] = useState(() => Math.min(0, QUESTIONS_ORDERED.length - 1))
   const [direction, setDirection] = useState(1)
+  const advanceTimer = useRef<number | null>(null)
   const safeIndex = Math.min(Math.max(index, 0), QUESTIONS_ORDERED.length - 1)
   const question = QUESTIONS_ORDERED[safeIndex]
   const value = question ? answers[question.id] : undefined
@@ -46,7 +47,11 @@ export function Questionnaire() {
       if (!question) return
       setAnswer(question.id, v)
       if (!isLast) {
-        window.setTimeout(() => goNext(), 280)
+        if (advanceTimer.current !== null) clearTimeout(advanceTimer.current)
+        advanceTimer.current = window.setTimeout(() => {
+          advanceTimer.current = null
+          goNext()
+        }, 280)
       }
     },
     [question, isLast, setAnswer, goNext],
@@ -56,6 +61,17 @@ export function Questionnaire() {
     finalize()
     navigate('/results')
   }, [finalize, navigate])
+
+  // If a previous quiz was finalized, reset to start fresh on entering this page.
+  useEffect(() => {
+    if (isFinalized) resetQuiz()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  // Clean up any pending auto-advance timer on unmount.
+  useEffect(() => {
+    return () => { if (advanceTimer.current !== null) clearTimeout(advanceTimer.current) }
+  }, [])
 
   // Guard: ensure index stays in range if questions array length changes.
   useEffect(() => {

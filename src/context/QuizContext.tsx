@@ -14,6 +14,8 @@ interface QuizContextValue {
   totalQuestions: number
   isComplete: boolean
   hasAnyAnswer: boolean
+  /** True when the quiz has been finalized (completedAt is set). */
+  isFinalized: boolean
   /** Computed result if the quiz was completed, else null. */
   result: AssessmentResult | null
   /** Force a (re)computation and persist completion time. */
@@ -73,6 +75,7 @@ export function QuizProvider({ children }: { children: ReactNode }) {
       totalQuestions: QUESTIONS.length,
       isComplete: answeredCount === QUESTIONS.length,
       hasAnyAnswer: answeredCount > 0,
+      isFinalized: completedAt !== null,
       result,
       finalize,
     }),
